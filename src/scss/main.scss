@@ -1,0 +1,21 @@
+@use "./base/fonts";
+@use "./base/normalize";
+@use "./base/vars";
+@use "./base/templates";
+@use "./base/settings";
+@use "./base/media";
+@use "./base/body-config";
+@use "./base/config-container";
+
+@use "./ui/button";
+@use "./ui/list";
+@use "./ui/title";
+@use "./ui/tab";
+@use "./ui/form-s";
+@use "./ui/social";
+@use "./ui/slider";
+
+@use "./components/header";
+@use "./components/fixed-catalog";
+
+@use "./components/footer";

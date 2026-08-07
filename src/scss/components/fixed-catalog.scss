@@ -1,0 +1,132 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.fixed-catalog {
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.15);
+  padding: 30px 0px;
+  position: fixed;
+  overflow-y: auto;
+  top: 112px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  max-height: calc(100vh - 112px);
+  z-index: 100;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.4s ease;
+
+  &._open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  &__wrap {
+    display: flex;
+    gap: 20px;
+  }
+  &__sidebar {
+    width: 340px;
+    flex-shrink: 0;
+  }
+  &__sidebar-list {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      border-radius: 10px;
+      padding: 10px 16px;
+
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 120%;
+
+      transition: background-color 0.3s ease;
+      @include hover {
+        background-color: var(--athens);
+
+        i {
+          opacity: 1;
+        }
+      }
+
+      &._active {
+        background-color: var(--athens);
+
+        i {
+          opacity: 1;
+        }
+      }
+
+      .item-icon {
+        display: block;
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        object-position: center;
+      }
+      i {
+        display: block;
+        margin-left: auto;
+        flex-shrink: 0;
+        font-size: 12px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+    }
+  }
+  &__body {
+    flex: 1;
+  }
+  &__tab {
+    display: none;
+    opacity: 0;
+    transform: translateY(15px);
+
+    transition:
+      opacity 0.4s ease,
+      transform 0.4s ease;
+
+    &._active {
+      display: block;
+    }
+    &._show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding-left: 20px;
+    border-left: 1px solid var(--geyser);
+  }
+  &__item {
+    a {
+      transition: color 0.3s ease;
+      @include hover {
+        color: var(--primary);
+      }
+    }
+    .item-title {
+      font-weight: 500;
+      font-size: 16px;
+    }
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 20px;
+
+      color: var(--pale);
+    }
+  }
+}
