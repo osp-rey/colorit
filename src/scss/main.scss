@@ -14,8 +14,21 @@
 @use "./ui/form-s";
 @use "./ui/social";
 @use "./ui/slider";
+@use "./ui/card-product-s";
+@use "./ui/sect";
+@use "./ui/card-cat";
+@use "./ui/card-product-r";
+@use "./ui/card-product";
+@use "./ui/products-slider";
 
 @use "./components/header";
 @use "./components/fixed-catalog";
+
+@use "./components/s-hero";
+@use "./components/s-cats";
+@use "./components/s-rec";
+@use "./components/s-products";
+@use "./components/s-all";
+@use "./components/s-shops";
 
 @use "./components/footer";

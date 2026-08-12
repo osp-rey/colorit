@@ -1,0 +1,12 @@
+.s-rec {
+  &__slider {
+    .swiper-slide {
+      box-sizing: border-box;
+      height: auto !important;
+
+      .card-product-r {
+        height: 100%;
+      }
+    }
+  }
+}

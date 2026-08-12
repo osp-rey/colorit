@@ -1,0 +1,47 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.sect-m {
+  margin: 40px 0px;
+}
+
+.sect-wrap {
+  padding: 25px 20px;
+  border-radius: 20px;
+
+  &._hidden {
+    overflow: hidden;
+  }
+
+  &._catskill {
+    background-color: var(--catskill);
+  }
+
+  .slider-arrow {
+    &._prev {
+      transform: translateX(-75px);
+    }
+    &._next {
+      transform: translateX(75px);
+    }
+  }
+}
+.sect-head {
+  @include flex-between;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.sect-nav {
+  margin-bottom: 30px;
+  .swiper-slide {
+    box-sizing: border-box;
+    width: fit-content !important;
+  }
+
+  .sect-nav-btn {
+    &._active {
+      pointer-events: none;
+    }
+  }
+}

@@ -65,3 +65,51 @@
     font-size: 15px;
   }
 }
+
+.btn-m {
+  --border: var(--primary);
+  --background: var(--primary);
+  --color: white;
+  --border-h: var(--primary-h);
+  --background-h: var(--primary-h);
+  --color-h: white;
+
+  @include flex-center;
+  cursor: pointer;
+  width: fit-content;
+  border: 1px solid var(--border);
+  outline: none;
+  background-color: var(--background);
+  padding: 12px 25px;
+  border-radius: 50px;
+
+  font-size: 14px;
+  user-select: none;
+  color: var(--color);
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+
+  @include hover {
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+    color: var(--color-h);
+  }
+
+  &._outline {
+    --border: var(--geyser);
+    --background: transparent;
+    --color: black;
+    --border-h: var(--primary);
+    --background-h: transparent;
+    --color-h: black;
+
+    &._active {
+      --background: var(--primary);
+      --border: var(--primary);
+      --color: white;
+    }
+  }
+}

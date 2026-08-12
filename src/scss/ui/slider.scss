@@ -1,6 +1,29 @@
 @use "../base/templates" as *;
 @use "../base/media" as *;
 
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .slider-arrow {
+    position: absolute;
+    z-index: 10;
+
+    &._prev {
+      left: 0;
+      transform: translateX(-55px);
+    }
+    &._next {
+      right: 0;
+      transform: translateX(55px);
+    }
+  }
+
+  .swiper {
+    width: 100%;
+  }
+}
 .slider-arrow {
   --background: white;
   --border: var(--geyser);
@@ -17,6 +40,7 @@
   border: 1px solid var(--border);
   cursor: pointer;
   border-radius: 50%;
+  flex-shrink: 0;
 
   color: var(--color);
   font-size: 14px;
@@ -35,7 +59,31 @@
   }
 
   &.swiper-button-disabled {
-    opacity: 0.5;
+    opacity: 0;
     pointer-events: none;
+  }
+}
+
+.slider-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+
+  .swiper-pagination-bullet {
+    margin: 0 !important;
+    opacity: 1 !important;
+    background-color: var(--geyser);
+    width: 8px;
+    height: 8px;
+    transition: background-color .3s ease;
+
+    @include hover {
+      background-color: var(--primary);
+    }
+
+    &.swiper-pagination-bullet-active {
+      background-color: var(--primary);
+    }
   }
 }

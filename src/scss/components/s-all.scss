@@ -1,0 +1,13 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-all {
+  &__cats {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+  }
+  &__slider-wrapper {
+    margin-top: 20px;
+  }
+}
