@@ -17,6 +17,11 @@
       transform: scale(1.08);
     }
   }
+  @include tablet-min {
+    padding: 10px;
+    font-size: 10px;
+    border-radius: 10px;
+  }
 
   &__title {
     font-weight: 700;
@@ -24,6 +29,9 @@
     line-height: 120%;
     text-transform: uppercase;
     margin: 0;
+    @include tablet-min {
+      font-size: 10px;
+    }
   }
 
   &__img {

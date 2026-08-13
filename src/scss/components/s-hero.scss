@@ -2,8 +2,15 @@
 @use '../base/media' as *;
 
 .s-hero {
+  @include tablet {
+    margin-top: 20px;
+    overflow: hidden;
+  }
   &__slider {
-    width: 100%;
+    flex: 1;
+    @include tablet {
+      overflow: visible !important;
+    }
   }
   &__slide {
     width: 1100px !important;
@@ -16,6 +23,9 @@
       picture {
         transform: scale(1.08);
       }
+    }
+    @include tablet {
+      aspect-ratio: 1/0.51;
     }
 
     picture {

@@ -1,3 +1,4 @@
+import burger from "./functions/burger.js";
 import catsListToggle from "./functions/catsListToggle.js";
 import fixedCatalog from "./functions/fixed-catalog.js";
 import formSearch from "./functions/form-search.js";
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   shopsMaps();
   tabs();
   catsListToggle();
+  burger();
 
   Fancybox.bind("[data-fancybox]");
 });

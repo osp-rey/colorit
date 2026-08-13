@@ -1,0 +1,149 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.burger-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 110;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+  &._active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (min-width: 1026px) {
+    display: none !important;
+  }
+}
+.burger {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  background-color: white;
+  width: 500px;
+  max-width: 100%;
+  z-index: 120;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-100%);
+
+  transition:
+    transform .4s ease,
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+
+  &._open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (min-width: 1026px) {
+    display: none !important;
+  }
+  &__tab {
+    display: none;
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+
+    &._active {
+      display: block;
+    }
+    &._show {
+      opacity: 1;
+      .burger__list {
+        transform: translateY(0);
+      }
+    }
+  }
+  &__container {
+    padding: 10px;
+    width: 100%;
+  }
+  &__head {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10px;
+  }
+  &__head-btn {
+    @include flex-center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--athens);
+    border-radius: 50%;
+    font-size: 14px;
+
+    transition: background-color 0.3s ease;
+    @include hover {
+      background-color: var(--primary);
+    }
+  }
+  &__close {
+    margin-left: auto;
+  }
+  &__tab-title {
+    font-weight: 700;
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__list {
+    transition: transform 0.3s ease;
+    transform: translateY(20px);
+    li {
+      @include flex-between;
+      border-bottom: 1px solid var(--geyser);
+      gap: 20px;
+
+      transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+      @include hover {
+        color: var(--primary);
+        border-color: var(--primary);
+      }
+
+      &._simple {
+        a {
+          width: 100%;
+        }
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 15px;
+        padding: 10px 0px;
+
+        img {
+          display: block;
+          flex-shrink: 0;
+        }
+      }
+      i {
+        font-size: 12px;
+      }
+    }
+  }
+  &__form-wrap {
+    width: 100%;
+    padding: 10px;
+    margin-top: auto;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  }
+}

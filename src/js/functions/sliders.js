@@ -44,14 +44,28 @@ export default function sliders() {
 
       const swiper = new Swiper(slider, {
         speed: 900,
-        slidesPerView: 6,
-        spaceBetween: 16,
+        slidesPerView: "auto",
+        spaceBetween: 5,
         autoplay: {
           delay: 6500,
         },
         navigation: {
           prevEl: sect.querySelector(".slider-arrow._prev"),
           nextEl: sect.querySelector(".slider-arrow._next"),
+        },
+        pagination: {
+          el: sect.querySelector(".slider-pagination"),
+          clickable: true
+        },
+        breakpoints: {
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 16,
+          },
+          576: {
+            slidesPerView: "auto",
+            spaceBetween: 16,
+          },
         },
       });
     });

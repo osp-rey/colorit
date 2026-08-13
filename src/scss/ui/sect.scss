@@ -3,6 +3,9 @@
 
 .sect-m {
   margin: 40px 0px;
+  @include tablet {
+    margin: 30px 0px;
+  }
 }
 
 .sect-wrap {

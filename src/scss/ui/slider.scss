@@ -10,13 +10,25 @@
     position: absolute;
     z-index: 10;
 
+    @include tablet {
+      display: none;
+    }
+
     &._prev {
       left: 0;
       transform: translateX(-55px);
+      @include desktop {
+        left: 10px;
+        transform: translateX(0);
+      }
     }
     &._next {
       right: 0;
       transform: translateX(55px);
+      @include desktop {
+        right: 10px;
+        transform: translateX(0);
+      }
     }
   }
 
@@ -69,6 +81,15 @@
   justify-content: center;
   gap: 8px;
   margin-top: 20px;
+  @include tablet {
+    margin-top: 10px;
+  }
+
+  &._lap {
+    @media (min-width: 1026px) {
+      display: none !important;
+    }
+  }
 
   .swiper-pagination-bullet {
     margin: 0 !important;
@@ -76,7 +97,7 @@
     background-color: var(--geyser);
     width: 8px;
     height: 8px;
-    transition: background-color .3s ease;
+    transition: background-color 0.3s ease;
 
     @include hover {
       background-color: var(--primary);
