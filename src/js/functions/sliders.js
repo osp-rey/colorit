@@ -110,12 +110,34 @@ export default function sliders() {
   const sectNavSliders = document.querySelectorAll(".sect-nav");
 
   if (sectNavSliders.length) {
-    sectNavSliders.forEach(slider => {
+    sectNavSliders.forEach((slider) => {
       const swiper = new Swiper(slider, {
         speed: 900,
         spaceBetween: 5,
-        slidesPerView: "auto"
-      })
-    })
+        slidesPerView: "auto",
+      });
+    });
+  }
+
+  const catsListSliders = document.querySelectorAll(".s-cats-list__slider");
+
+  if (catsListSliders.length) {
+    catsListSliders.forEach((slider) => {
+      const sect = slider.closest("section");
+
+      const swiper = new Swiper(slider, {
+        speed: 900,
+        spaceBetween: 40,
+        slidesPerView: 5,
+        navigation: {
+          prevEl: sect.querySelector(".slider-arrow._prev"),
+          nextEl: sect.querySelector(".slider-arrow._next"),
+        },
+        pagination: {
+          el: sect.querySelector(".slider-pagination"),
+          clickable: true,
+        },
+      });
+    });
   }
 }

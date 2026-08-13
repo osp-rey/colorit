@@ -82,6 +82,7 @@
   background-color: var(--background);
   padding: 12px 25px;
   border-radius: 50px;
+  gap: 10px;
 
   font-size: 14px;
   user-select: none;
@@ -111,5 +112,9 @@
       --border: var(--primary);
       --color: white;
     }
+  }
+
+  .i-arrow {
+    font-size: 8px;
   }
 }

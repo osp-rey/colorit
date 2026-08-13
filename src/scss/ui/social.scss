@@ -5,34 +5,62 @@
   display: flex;
   gap: 15px;
   flex-shrink: 0;
+
+  &._white {
+    .social-item {
+      --background: transparent;
+      --border: white;
+      --color: white;
+      --background: transparent;
+      --border-h: var(--primary);
+      --color-h: var(--primary);
+    }
+  }
+
+  .social-item {
+    --background: transparent;
+    --border: var(--geyser);
+    --color: var(--black);
+    --background: transparent;
+    --border-h: var(--primary);
+    --color-h: var(--primary);
+
+    @include flex-center;
+    border: 1px solid var(--border);
+    background-color: var(--background);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+
+    color: var(--color);
+    font-size: 20px;
+
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease;
+
+    @include hover {
+      background-color: var(--background-h);
+      border-color: var(--border-h);
+      color: var(--color-h);
+    }
+  }
 }
 
-.social-item {
-  --background: transparent;
-  --border: var(--geyser);
-  --color: var(--black);
-  --background: transparent;
-  --border-h: var(--primary);
-  --color-h: var(--primary);
+.social-s {
+  display: flex;
+  flex-shrink: 0;
+  gap: 10px;
 
-  @include flex-center;
-  border: 1px solid var(--border);
-  background-color: var(--background);
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  .social-s-item {
+    display: block;
+    font-size: 22px;
+    color: var(--black);
+    transition: color 0.3s ease;
 
-  color: var(--color);
-  font-size: 22px;
-
-  transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease;
-
-  @include hover {
-    background-color: var(--background-h);
-    border-color: var(--border-h);
-    color: var(--color-h);
+    @include hover {
+      color: var(--primary);
+    }
   }
 }

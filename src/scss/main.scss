@@ -20,6 +20,7 @@
 @use "./ui/card-product-r";
 @use "./ui/card-product";
 @use "./ui/products-slider";
+@use "./ui/scrollbar";
 
 @use "./components/header";
 @use "./components/fixed-catalog";
@@ -30,5 +31,6 @@
 @use "./components/s-products";
 @use "./components/s-all";
 @use "./components/s-shops";
+@use "./components/s-cats-list";
 
 @use "./components/footer";

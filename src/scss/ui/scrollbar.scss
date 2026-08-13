@@ -1,0 +1,14 @@
+._scrollbar {
+  &::-webkit-scrollbar {
+    width: 4px; /* Ширина всего элемента навигации */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--athens); /* Цвет дорожки */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--bombay); /* Цвет бегунка */
+    border-radius: 10px; /* Округление бегунка */
+  }
+}
