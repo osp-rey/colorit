@@ -2,6 +2,12 @@
 @use "../base/media" as *;
 
 .s-cats-list {
+  @include laptop-min {
+    overflow: hidden;
+    .container {
+      padding: 0;
+    }
+  }
   &__slider-wrap {
     position: relative;
     padding-bottom: 20px;
@@ -9,6 +15,7 @@
 
     &._open {
       .s-cats-list__slider-wrap-inside {
+        margin-bottom: 30px;
         &::before {
           opacity: 0;
         }
@@ -22,7 +29,16 @@
     width: 100%;
     max-height: 180px;
 
-    transition: max-height .3s ease;
+    transition:
+      max-height 0.3s ease,
+      margin 0.3s ease;
+
+    @include laptop-min {
+      padding: 0 15px;
+    }
+    @include tablet {
+      padding: 0 10px;
+    }
 
     &::before {
       position: absolute;
@@ -34,17 +50,29 @@
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
       z-index: 10;
 
-      transition: opacity .3s ease;
+      transition: opacity 0.3s ease;
     }
   }
   &__slider {
     position: relative;
+    @include laptop-min {
+      overflow: visible !important;
+    }
   }
   &__slide {
     box-sizing: border-box;
 
+    @include laptop-min {
+      overflow: visible !important;
+      width: 250px !important;
+      max-width: 100%;
+    }
+    @include tablet-min {
+      width: 170px !important;
+    }
+
     a {
-      transition: color .3s ease;
+      transition: color 0.3s ease;
 
       @include hover {
         color: var(--primary);
@@ -55,24 +83,36 @@
     font-weight: 700;
     font-size: 17px;
     line-height: 120%;
+
+    @include tablet-min {
+      font-size: 15px;
+    }
   }
   &__slide-list {
     display: flex;
     flex-direction: column;
     gap: 5px;
     margin-top: 15px;
+
+    @include tablet-min {
+      font-size: 13px;
+    }
   }
   &__btn-more {
     position: absolute;
+    white-space: nowrap;
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
     z-index: 15;
 
     .i-arrow {
-      transition: transform .3s ease;
+      transition: transform 0.3s ease;
     }
 
+    &:not(._active) {
+      background-color: white !important;
+    }
     &._active {
       .i-arrow {
         transform: rotate(180deg);

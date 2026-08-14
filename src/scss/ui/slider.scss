@@ -90,6 +90,9 @@
       display: none !important;
     }
   }
+  &.swiper-pagination-lock {
+    display: none !important;
+  }
 
   .swiper-pagination-bullet {
     margin: 0 !important;

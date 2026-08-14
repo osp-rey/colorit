@@ -1,0 +1,76 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.tooltip-a-btn {
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+.tooltip-a {
+  position: absolute;
+  left: 0;
+  bottom: calc(100%);
+  padding-bottom: 10px;
+  width: 320px;
+
+  z-index: 20;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+
+  @include tablet {
+    width: 250px;
+  }
+
+  &._open {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+.tooltip-a-inside {
+  background-color: white;
+  width: 100%;
+  color: var(--black);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.tooltip-a-title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.tooltip-a-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 260px;
+  padding-right: 10px;
+  overflow-y: auto;
+}
+.tooltip-a-item {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.tooltip-a-item__body {
+}
+.tooltip-a-item__title {
+  font-weight: 600;
+  font-size: 14px;
+}
+.tooltip-a-item__text {
+  margin-top: 6px;
+  color: var(--pale);
+}
+.tooltip-a-item__count {
+  font-weight: 600;
+  font-size: 14px;
+}

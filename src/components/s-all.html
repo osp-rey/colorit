@@ -1,33 +1,50 @@
 <section class="s-all sect-m">
   <div class="container">
     <div class="sect-head">
-      <h2 class="s-title">Все для ремонта</h2>
+      <h2 class="s-title">@@title</h2>
     </div>
-    <div class="s-all__cats">
-      <a href="#" class="card-cat">
-        <h3 class="card-cat__title">краски</h3>
-        <img src="@img/card-color.jpg" alt="image" class="card-cat__img" />
-      </a>
-      <a href="#" class="card-cat">
-        <h3 class="card-cat__title">лаки</h3>
-        <img src="@img/card-color.jpg" alt="image" class="card-cat__img" />
-      </a>
-      <a href="#" class="card-cat">
-        <h3 class="card-cat__title">Грунтовки</h3>
-        <img src="@img/card-color.jpg" alt="image" class="card-cat__img" />
-      </a>
-      <a href="#" class="card-cat">
-        <h3 class="card-cat__title">Строительные смеси</h3>
-        <img src="@img/card-color.jpg" alt="image" class="card-cat__img" />
-      </a>
-      <a href="#" class="card-cat">
-        <h3 class="card-cat__title">Ручной инструмент</h3>
-        <img src="@img/card-color.jpg" alt="image" class="card-cat__img" />
-      </a>
-      <a href="#" class="card-cat">
-        <h3 class="card-cat__title">Электро-бензоинструмент</h3>
-        <img src="@img/card-color.jpg" alt="image" class="card-cat__img" />
-      </a>
+    <div class="s-all__cats-wrap">
+      <div class="swiper s-all__cats-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#" class="card-cat">
+              <h3 class="card-cat__title">краски</h3>
+              <img src="@img/card-color.jpg" alt="image" class="card-cat__img" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="card-cat">
+              <h3 class="card-cat__title">лаки</h3>
+              <img src="@img/card-color.jpg" alt="image" class="card-cat__img" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="card-cat">
+              <h3 class="card-cat__title">Грунтовки</h3>
+              <img src="@img/card-color.jpg" alt="image" class="card-cat__img" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="card-cat">
+              <h3 class="card-cat__title">Строительные смеси</h3>
+              <img src="@img/card-color.jpg" alt="image" class="card-cat__img" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="card-cat">
+              <h3 class="card-cat__title">Ручной инструмент</h3>
+              <img src="@img/card-color.jpg" alt="image" class="card-cat__img" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#" class="card-cat">
+              <h3 class="card-cat__title">Электро-бензоинструмент</h3>
+              <img src="@img/card-color.jpg" alt="image" class="card-cat__img" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="slider-pagination"></div>
     </div>
     <div class="slider-wrapper s-all__slider-wrapper">
       <div class="slider-arrow _prev">
@@ -51,7 +68,8 @@
                   бесщеточная "ПРОФЕССИОНАЛ" 20В
                 </a>
               </div>
-              <div class="card-product__location-btn">
+              <div data-product-availability='[{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."}]'
+                class="card-product__location-btn tooltip-a-btn">
                 <i class="icon-location"></i>
                 <span>В наличии</span>
               </div>
@@ -67,7 +85,7 @@
                   </div>
                 </div>
                 <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
+                  <i class="icon-cart"></i><span>В корзину</span>
                 </div>
               </div>
             </article>
@@ -84,7 +102,8 @@
                   Углошлифовальная машина ЗУБР
                 </a>
               </div>
-              <div class="card-product__location-btn">
+              <div data-product-availability='[{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."}]'
+                class="card-product__location-btn tooltip-a-btn">
                 <i class="icon-location"></i>
                 <span>В наличии</span>
               </div>
@@ -98,7 +117,7 @@
                   </div>
                 </div>
                 <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
+                  <i class="icon-cart"></i><span>В корзину</span>
                 </div>
               </div>
             </article>
@@ -116,7 +135,8 @@
                   бесщеточная "ПРОФЕССИОНАЛ" 20В
                 </a>
               </div>
-              <div class="card-product__location-btn">
+              <div data-product-availability='[{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."}]'
+                class="card-product__location-btn tooltip-a-btn">
                 <i class="icon-location"></i>
                 <span>В наличии</span>
               </div>
@@ -132,7 +152,7 @@
                   </div>
                 </div>
                 <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
+                  <i class="icon-cart"></i><span>В корзину</span>
                 </div>
               </div>
             </article>
@@ -149,7 +169,8 @@
                   Углошлифовальная машина ЗУБР
                 </a>
               </div>
-              <div class="card-product__location-btn">
+              <div data-product-availability='[{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."}]'
+                class="card-product__location-btn tooltip-a-btn">
                 <i class="icon-location"></i>
                 <span>В наличии</span>
               </div>
@@ -163,7 +184,7 @@
                   </div>
                 </div>
                 <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
+                  <i class="icon-cart"></i><span>В корзину</span>
                 </div>
               </div>
             </article>
@@ -181,7 +202,8 @@
                   бесщеточная "ПРОФЕССИОНАЛ" 20В
                 </a>
               </div>
-              <div class="card-product__location-btn">
+              <div data-product-availability='[{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."}]'
+                class="card-product__location-btn tooltip-a-btn">
                 <i class="icon-location"></i>
                 <span>В наличии</span>
               </div>
@@ -197,7 +219,7 @@
                   </div>
                 </div>
                 <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
+                  <i class="icon-cart"></i><span>В корзину</span>
                 </div>
               </div>
             </article>
@@ -214,7 +236,8 @@
                   Углошлифовальная машина ЗУБР
                 </a>
               </div>
-              <div class="card-product__location-btn">
+              <div data-product-availability='[{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."}]'
+                class="card-product__location-btn tooltip-a-btn">
                 <i class="icon-location"></i>
                 <span>В наличии</span>
               </div>
@@ -228,7 +251,7 @@
                   </div>
                 </div>
                 <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
+                  <i class="icon-cart"></i><span>В корзину</span>
                 </div>
               </div>
             </article>
@@ -246,7 +269,8 @@
                   бесщеточная "ПРОФЕССИОНАЛ" 20В
                 </a>
               </div>
-              <div class="card-product__location-btn">
+              <div data-product-availability='[{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."}]'
+                class="card-product__location-btn tooltip-a-btn">
                 <i class="icon-location"></i>
                 <span>В наличии</span>
               </div>
@@ -262,7 +286,7 @@
                   </div>
                 </div>
                 <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
+                  <i class="icon-cart"></i><span>В корзину</span>
                 </div>
               </div>
             </article>
@@ -279,7 +303,8 @@
                   Углошлифовальная машина ЗУБР
                 </a>
               </div>
-              <div class="card-product__location-btn">
+              <div data-product-availability='[{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."},{"title": "Дербышки, Мира 45А", "count": "3 шт.", "text": "пн-вс: c 8:00 до 20:00, <br/> вс: с 8:00 до 19:00."}]'
+                class="card-product__location-btn tooltip-a-btn">
                 <i class="icon-location"></i>
                 <span>В наличии</span>
               </div>
@@ -293,7 +318,7 @@
                   </div>
                 </div>
                 <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
+                  <i class="icon-cart"></i><span>В корзину</span>
                 </div>
               </div>
             </article>
@@ -301,5 +326,6 @@
         </div>
       </div>
     </div>
+    <div class="slider-pagination"></div>
   </div>
 </section>

@@ -8,6 +8,10 @@
 .body {
   font-family: "NunitoSans", sans-serif;
   font-size: 15px;
+  @include tablet-min {
+    font-size: 14px;
+  }
+
   &.error404 {
     display: flex;
     flex-direction: column;

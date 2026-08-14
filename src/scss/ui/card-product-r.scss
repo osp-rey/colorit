@@ -13,6 +13,9 @@
   @include hover {
     border-color: var(--primary);
   }
+  @include tablet {
+    padding: 10px;
+  }
 
   &__gallery {
     position: relative;
@@ -34,6 +37,11 @@
       font-weight: 700;
 
       z-index: 1;
+
+      @include tablet {
+        font-size: 12px;
+        padding: 3px 8px;
+      }
     }
 
     img {
@@ -52,6 +60,9 @@
     flex-direction: column;
     flex: 1;
     margin-top: 10px;
+    @include tablet {
+      margin-top: 5px;
+    }
   }
   &__title {
     @include overflowText(3);
@@ -62,6 +73,9 @@
     @include hover {
       color: var(--primary);
     }
+    @include tablet {
+      font-size: 12px;
+    }
   }
   &__price {
     display: flex;
@@ -69,14 +83,25 @@
     gap: 14px;
     margin-top: auto;
     padding-top: 10px;
+    @include tablet {
+      gap: 5px;
+      margin-top: 5px;
+    }
+
     .item-price {
       font-weight: 600;
       font-size: 22px;
+      @include tablet {
+        font-size: 18px;
+      }
     }
     .item-old-price {
       font-size: 18px;
       text-decoration: line-through;
       color: var(--bombay);
+      @include tablet {
+        font-size: 16px;
+      }
     }
   }
 }

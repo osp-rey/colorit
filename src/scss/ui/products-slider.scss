@@ -2,9 +2,21 @@
 @use '../base/media' as *;
 
 .products-slider {
+  @include laptop-middle {
+    overflow: visible !important;
+  }
   .swiper-slide {
     box-sizing: border-box;
     height: auto !important;
+    transform: none !important;
+
+    @include laptop-middle {
+      width: 270px !important;
+      max-width: 100%;
+    }
+    @include tablet-min {
+      width: 180px !important;
+    }
 
     .card-product {
       height: 100%;

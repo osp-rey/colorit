@@ -2,5 +2,7 @@
 @use '../base/media' as *;
 
 .s-products {
-
+  @include laptop-middle {
+    overflow: hidden;
+  }
 }

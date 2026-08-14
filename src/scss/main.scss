@@ -21,6 +21,7 @@
 @use "./ui/card-product";
 @use "./ui/products-slider";
 @use "./ui/scrollbar";
+@use "./ui/tooltip-a";
 
 @use "./components/header";
 @use "./components/burger";
@@ -33,5 +34,6 @@
 @use "./components/s-all";
 @use "./components/s-shops";
 @use "./components/s-cats-list";
+@use "./components/s-offer";
 
 @use "./components/footer";
