@@ -1,0 +1,52 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.check-item {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  width: fit-content;
+
+  @include hover {
+    span {
+      &::before {
+        border-color: var(--primary);
+      }
+    }
+  }
+
+  input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked + span {
+      &::before {
+        background: url("@img/check-white.svg") center / 10px auto no-repeat;
+        background-color: var(--primary) !important;
+        border-color: var(--primary);
+      }
+    }
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &::before {
+      content: "";
+      display: block;
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 3px;
+      border: 1px solid var(--geyser);
+
+      transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+    }
+  }
+}

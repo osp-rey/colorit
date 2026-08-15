@@ -1,0 +1,36 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  font-size: 14px;
+  color: var(--bombay);
+
+  @include tablet {
+    font-size: 12px;
+    gap: 5px;
+  }
+
+  a {
+    transition: color .3s ease;
+
+    @include hover {
+      color: var(--black);
+    }
+  }
+}
+.breadcrumb-item {
+}
+.breadcrumb-separator {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+
+  @include tablet {
+    font-size: 10px;
+  }
+}

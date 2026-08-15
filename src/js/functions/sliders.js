@@ -36,10 +36,10 @@ export default function sliders() {
     });
   }
 
-  const catsSliders = document.querySelectorAll(".s-cats__slider");
+  const catsSlidersSect = document.querySelectorAll(".s-cats__slider");
 
-  if (catsSliders.length) {
-    catsSliders.forEach((slider) => {
+  if (catsSlidersSect.length) {
+    catsSlidersSect.forEach((slider) => {
       const sect = slider.closest("section");
 
       const swiper = new Swiper(slider, {
@@ -205,7 +205,7 @@ export default function sliders() {
 
       const swiper = new Swiper(slider, {
         speed: 900,
-        spaceBetween: 16,
+        spaceBetween: 5,
         slidesPerView: "auto",
         pagination: {
           el: wrap?.querySelector(".slider-pagination"),
@@ -275,6 +275,45 @@ export default function sliders() {
           1200: {
             spaceBetween: 5,
             slidesPerView: 2,
+          },
+        },
+      });
+    });
+  }
+
+  const catsSliders = document.querySelectorAll(".cats-slider");
+
+  if (catsSliders.length) {
+    catsSliders.forEach((slider) => {
+      const wrap = slider.closest(".slider-wrapper");
+
+      const swiper = new Swiper(slider, {
+        speed: 900,
+        spaceBetween: 5,
+        slidesPerView: "auto",
+        navigation: {
+          prevEl: wrap.querySelector(".slider-arrow._prev"),
+          nextEl: wrap.querySelector(".slider-pagination._next"),
+        },
+        pagination: {
+          el: wrap.nextElementSibling,
+          clickable: true,
+        },
+        autoplay: {
+          delay: 7500,
+        },
+        breakpoints: {
+          1365: {
+            spaceBetween: 16,
+            slidesPerView: 6,
+          },
+          1200: {
+            spaceBetween: 16,
+            slidesPerView: 5,
+          },
+          1026: {
+            spaceBetween: 16,
+            slidesPerView: 4,
           },
         },
       });

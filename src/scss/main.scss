@@ -22,6 +22,11 @@
 @use "./ui/products-slider";
 @use "./ui/scrollbar";
 @use "./ui/tooltip-a";
+@use "./ui/breadcrumbs";
+@use "./ui/cats-slider";
+@use "./ui/select";
+@use "./ui/form";
+@use "./ui/content-box";
 
 @use "./components/header";
 @use "./components/burger";
@@ -35,5 +40,7 @@
 @use "./components/s-shops";
 @use "./components/s-cats-list";
 @use "./components/s-offer";
+@use "./components/s-catalog";
+@use "./components/s-shop";
 
 @use "./components/footer";

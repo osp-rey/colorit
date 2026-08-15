@@ -1,0 +1,116 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.select {
+  position: relative;
+  width: 100%;
+
+  &._open {
+    .select-btn {
+      i {
+        transform: rotate(180deg);
+      }
+    }
+    .select-body {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}
+.select-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 15px;
+  border-radius: 50px;
+  border: 1px solid var(--geyser);
+  cursor: pointer;
+
+  transition: border-color 0.3s ease;
+
+  @include hover {
+    border-color: var(--black);
+  }
+
+  i {
+    font-size: 8px;
+    transition: transform 0.3s ease;
+  }
+}
+.select-input {
+  pointer-events: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 15px;
+  width: 100%;
+  display: block;
+}
+.select-body {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border-radius: 12px;
+  border: 1px solid var(--athens);
+  background-color: white;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+
+  z-index: 10;
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.4s ease;
+}
+.select-items-wrap {
+  max-height: 220px;
+  overflow-y: auto;
+}
+.select-item {
+  cursor: pointer;
+  padding: 8px 14px;
+
+  user-select: none;
+
+  transition: background-color 0.3s ease;
+  @include hover {
+    background-color: var(--geyser);
+  }
+
+  &._active {
+    pointer-events: none;
+    background-color: var(--geyser);
+  }
+}
+.select-check-wrap {
+  padding: 10px 0px;
+}
+.select-check-wrap-inside {
+  padding: 0px 2px 0px 10px;
+  margin-right: 10px;
+  overflow-y: auto;
+  max-height: 220px;
+}
+.select-check-block {
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+.select-check-block-title {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.select-check-items {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

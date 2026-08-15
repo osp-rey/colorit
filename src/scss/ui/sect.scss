@@ -3,9 +3,16 @@
 
 .sect-m {
   margin: 40px 0px;
+  &._first {
+    margin-top: 30px;
+  }
   @include tablet {
     margin: 30px 0px;
+    &._first {
+      margin-top: 20px;
+    }
   }
+
 }
 
 .sect-wrap {
@@ -49,6 +56,10 @@
     @include tablet-min {
       display: none;
     }
+  }
+
+  .breadcrumbs {
+    margin-bottom: 15px;
   }
 }
 

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?xww74v');
-  src:  url('fonts/icomoon.eot?xww74v#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?xww74v') format('truetype'),
-    url('fonts/icomoon.woff?xww74v') format('woff'),
-    url('fonts/icomoon.svg?xww74v#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?5hpo4b');
+  src:  url('fonts/icomoon.eot?5hpo4b#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?5hpo4b') format('truetype'),
+    url('fonts/icomoon.woff?5hpo4b') format('woff'),
+    url('fonts/icomoon.svg?5hpo4b#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,14 +25,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-filters:before {
+  content: "\e901";
+}
 .icon-burger:before {
   content: "\e910";
 }
 .icon-arrow-blur:before {
   content: "\e900";
-}
-.icon-bottom:before {
-  content: "\e901";
 }
 .icon-card:before {
   content: "\e902";
@@ -43,7 +43,7 @@
 .icon-close:before {
   content: "\e904";
 }
-.icon-down:before {
+.icon-bottom:before {
   content: "\e905";
 }
 .icon-exit:before {
