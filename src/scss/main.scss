@@ -27,6 +27,7 @@
 @use "./ui/select";
 @use "./ui/form";
 @use "./ui/content-box";
+@use "./ui/toggle";
 
 @use "./components/header";
 @use "./components/burger";
@@ -42,5 +43,6 @@
 @use "./components/s-offer";
 @use "./components/s-catalog";
 @use "./components/s-shop";
+@use "./components/s-product";
 
 @use "./components/footer";

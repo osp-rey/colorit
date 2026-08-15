@@ -319,4 +319,26 @@ export default function sliders() {
       });
     });
   }
+
+  const productSlider = document.querySelector(".s-product__slider");
+
+  if (productSlider) {
+    const thumbSlider = document.querySelector(".s-product__thumb-slider");
+
+    const thumbsSwiper = new Swiper(thumbSlider, {
+      speed: 900,
+      spaceBetween: 5,
+      slidesPerView: 6,
+      direction: "vertical"
+    })
+
+    const swiper = new Swiper(productSlider, {
+      speed: 900,
+      spaceBetween: 15,
+      slidesPerView: 1,
+      thumbs: {
+        swiper: thumbSlider
+      }
+    })
+  }
 }

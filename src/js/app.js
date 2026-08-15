@@ -9,6 +9,7 @@ import shopsMaps from "./functions/shopsMaps.js";
 import sliders from "./functions/sliders.js";
 import spoller from "./functions/spollers.js";
 import tabs from "./functions/tabs.js";
+import toggle from "./functions/toggle.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   fixedCatalog();
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   handlerSelect();
   spoller();
   filtersShop();
+  toggle();
 
   Fancybox.bind("[data-fancybox]");
 });

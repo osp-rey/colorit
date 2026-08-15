@@ -1,0 +1,18 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+[data-toggle-item] {
+  transform: translateY(20px);
+  opacity: 0;
+  display: none !important;
+
+  transition: opacity .4s ease, transform .4s ease;
+
+  &._show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  &._active {
+    display: block;
+  }
+}

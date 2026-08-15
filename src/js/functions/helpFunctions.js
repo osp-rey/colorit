@@ -25,7 +25,44 @@ export function createScript(url, type) {
     }
   });
 }
+export function countLinesInElement(element) {
+  if (!element) return 0;
+  var text = element.innerText || element.textContent || "";
 
+  var text = element.innerText || "";
+  if (!text.trim()) return 0;
+
+  var clone = element.cloneNode(true);
+  clone.style.position = "absolute";
+  clone.style.visibility = "hidden";
+  clone.style.width = element.offsetWidth + "px";
+  clone.style.height = "auto";
+  clone.style.maxHeight = "none";
+  clone.style.overflow = "visible";
+  clone.style.whiteSpace = "normal";
+  clone.style.wordWrap = "break-word";
+
+  var computedStyle = window.getComputedStyle(element);
+  clone.style.fontSize = computedStyle.fontSize;
+  clone.style.fontFamily = computedStyle.fontFamily;
+  clone.style.fontWeight = computedStyle.fontWeight;
+  clone.style.lineHeight = computedStyle.lineHeight;
+  clone.style.padding = computedStyle.padding;
+  clone.style.margin = "0";
+  clone.style.border = "none";
+  clone.style.boxSizing = "border-box";
+
+  document.body.appendChild(clone);
+
+  var height = clone.offsetHeight;
+  var lineHeight =
+    parseFloat(computedStyle.lineHeight) ||
+    parseFloat(computedStyle.fontSize) * 1.2;
+
+  document.body.removeChild(clone);
+
+  return Math.ceil(height / lineHeight);
+}
 export function slideUp(target, duration = 500, showmore = 0) {
   if (!target.classList.contains("_slide")) {
     target.classList.add("_slide");
