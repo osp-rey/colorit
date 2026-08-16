@@ -90,6 +90,11 @@
       display: none !important;
     }
   }
+  &._lap-middle {
+    @media (min-width: 1200px) {
+      display: none;
+    }
+  }
   &.swiper-pagination-lock {
     display: none !important;
   }

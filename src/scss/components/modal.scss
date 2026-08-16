@@ -1,0 +1,144 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.fancybox__backdrop {
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal {
+  display: none;
+  cursor: auto;
+  width: 600px;
+  max-width: 100%;
+  padding: 0;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  padding: 0 !important;
+  &._shops {
+    width: 660px;
+  }
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--bombay);
+    font-size: 15px;
+    cursor: pointer;
+    z-index: 10;
+
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+  }
+  &__container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 40px 20px 40px 40px;
+    z-index: 1;
+
+    @include laptop-min {
+      padding: 30px 15px 30px 30px;
+    }
+    @include tablet {
+      padding: 20px 10px 20px 20px;
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__tabs {
+  }
+  &__tabs-nav {
+    overflow-x: scroll !important;
+    display: flex;
+    gap: 5px;
+    white-space: nowrap;
+    margin: 0 -20px 30px -40px;
+    padding: 0px 20px 0px 40px;
+
+    @include laptop-min {
+      margin: 0 -15px 20px -30px;
+      padding: 0px 15px 0px 30px;
+    }
+    @include tablet {
+      margin: 0 -10px 15px -20px;
+      padding: 0px 10px 0px 20px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+  &__shops {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    overflow-y: auto;
+    padding-right: 20px;
+    max-height: 550px;
+    @include tablet {
+      gap: 10px;
+    }
+  }
+  &__shop {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--geyser);
+
+    @include tablet {
+      padding-bottom: 10px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__shop-name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    @include mobile {
+      reading-order: 1;
+    }
+  }
+  &__shop-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    @include mobile {
+      grid-column: 2 span;
+      order: 3;
+    }
+
+    li {
+      display: flex;
+      gap: 10px;
+
+      .item-name {
+        flex: 0 1 55px;
+        line-height: 120%;
+        color: var(--bombay);
+      }
+    }
+  }
+  &__shop-tel {
+    display: block;
+    width: fit-content;
+    font-size: 18px;
+    transition: color .3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+    @include tablet {
+      grid-column: 2 span;
+    }
+    @include mobile {
+      grid-column: 1 span;
+      font-size: 16px;
+      order: 2;
+    }
+  }
+}

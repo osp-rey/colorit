@@ -24,6 +24,13 @@
     align-items: center;
     font-size: 14px;
     gap: 14px;
+
+    transition: opacity 0.3s ease;
+
+    @include hover {
+      opacity: 0.7;
+    }
+
     .icon-location {
       flex-shrink: 0;
       font-size: 14px;
@@ -86,7 +93,17 @@
 }
 
 .header {
+  position: sticky;
+  top: 0;
   padding: 10px 0px;
+  transition: transform 0.4s ease;
+  background-color: white;
+  z-index: 100;
+
+  &._hide {
+    transform: translateY(-100%);
+  }
+
   .form-s {
     flex: 1;
     width: auto;
@@ -202,7 +219,7 @@
       }
 
       i {
-        color: black
+        color: black;
       }
     }
   }

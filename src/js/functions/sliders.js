@@ -324,21 +324,55 @@ export default function sliders() {
 
   if (productSlider) {
     const thumbSlider = document.querySelector(".s-product__thumb-slider");
+    const thumbSliderWrap = document.querySelector(".s-product__thumb-wrap");
 
     const thumbsSwiper = new Swiper(thumbSlider, {
       speed: 900,
       spaceBetween: 5,
-      slidesPerView: 6,
-      direction: "vertical"
-    })
+      slidesPerView: 5,
+      direction: "vertical",
+      navigation: {
+        prevEl: ".s-product__thumb-arrow._prev",
+        nextEl: ".s-product__thumb-arrow._next",
+      },
+      on: {
+        init: (swiper) => {
+          isEndSlider(swiper);
+        },
+        slideChange: (swiper) => {
+          isEndSlider(swiper);
+        },
+      },
+      breakpoints: {
+        1200: {
+          spaceBetween: 5,
+          slidesPerView: 6,
+        },
+      },
+    });
+
+    function isEndSlider(swiper) {
+      if (swiper.isEnd) {
+        thumbSliderWrap.classList.add("_end");
+      } else {
+        thumbSliderWrap.classList.remove("_end");
+      }
+    }
 
     const swiper = new Swiper(productSlider, {
       speed: 900,
       spaceBetween: 15,
       slidesPerView: 1,
       thumbs: {
-        swiper: thumbSlider
-      }
-    })
+        swiper: thumbSlider,
+      },
+      pagination: {
+        el: ".s-product__gallery .slider-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 6500,
+      },
+    });
   }
 }

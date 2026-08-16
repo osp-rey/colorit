@@ -12,10 +12,10 @@
 
   a {
     text-decoration: underline;
-    color: var(--primary);
-
+    
     @include hover {
       text-decoration: none;
+      color: var(--primary);
     }
   }
 }

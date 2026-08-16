@@ -4,6 +4,8 @@ export default function tabs() {
   if (buttons.length) {
     buttons.forEach((btn) => {
       btn.addEventListener("click", () => {
+        if (btn.classList.contains("_active")) return;
+
         const container = btn.closest(".tabs");
         const tabId = btn.dataset.tabBtn;
         const allButtons = container

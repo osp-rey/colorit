@@ -137,7 +137,7 @@
   border-radius: 50px;
   gap: 10px;
 
-  font-size: 14px;
+  font-weight: 700;
   user-select: none;
   color: var(--color);
 
@@ -168,5 +168,17 @@
       --border: var(--primary);
       --color: white;
     }
+  }
+  &._geyser {
+    --border: var(--geyser);
+    --background: var(--geyser);
+    --color: black;
+    --border-h: var(--primary);
+    --background-h: var(--primary);
+    --color-h: white;
+  }
+
+  i {
+    font-size: 16px;
   }
 }

@@ -9,17 +9,18 @@ export default function toggle() {
         container.querySelectorAll("[data-toggle-item]"),
       ).filter((item) => window.getComputedStyle(item).display === "none");
       const btn = container.querySelector("[data-toggle-btn]");
-      const btnStartText = btn.textContent;
+      const btnStartText = btn.textContent || btn.dataset.startText;
       const text = container.querySelector("[data-toggle-text]");
       const textLines = countLinesInElement(text);
+      const itemTextBtn = btn.querySelector("[data-toggle-btn-text]");
 
-      console.log(textLines);
+      let itemToggleText = itemTextBtn || btn;
 
       if (items.length) {
         btn.addEventListener("click", () => {
           if (btn.classList.contains("_active")) {
             btn.classList.remove("_active");
-            btn.textContent = btnStartText;
+            itemToggleText.textContent = btnStartText;
 
             items.forEach((item) => {
               item.classList.remove("_show");
@@ -29,7 +30,7 @@ export default function toggle() {
             });
           } else {
             btn.classList.add("_active");
-            btn.textContent = btn.dataset.toggleBtn;
+            itemToggleText.textContent = btn.dataset.toggleBtn;
 
             items.forEach((item) => {
               item.classList.add("_active");
@@ -44,12 +45,12 @@ export default function toggle() {
         btn.addEventListener("click", () => {
           if (btn.classList.contains("_active")) {
             btn.classList.remove("_active");
-            btn.textContent = btnStartText;
+            itemToggleText.textContent = btnStartText;
 
             text.classList.add("_hide");
           } else {
             btn.classList.add("_active");
-            btn.textContent = btn.dataset.toggleBtn;
+            itemToggleText.textContent = btn.dataset.toggleBtn;
 
             text.classList.remove("_hide");
           }
