@@ -140,4 +140,31 @@
   &__sidebar {
     flex: 0 0 355px;
   }
+  &__sidebar-body {
+    border-radius: 16px;
+    width: 100%;
+    padding: 30px;
+    background-color: var(--catskill);
+  }
+  &__sidebar-text {
+    color: var(--bombay);
+    margin-bottom: 10px;
+  }
+  &__sidebar-price {
+    display: flex;
+    align-items: flex-end;
+    gap: 14px;
+
+    .item-price {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 140%;
+    }
+    .item-old-price {
+    }
+    .item-discount {
+    }
+  }
+  &__sidebar-buttons {
+  }
 }
