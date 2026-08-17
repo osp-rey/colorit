@@ -8,6 +8,7 @@ import fixedCatalog from "./functions/fixed-catalog.js";
 import formSearch from "./functions/form-search.js";
 import headerScroll from "./functions/headerScroll.js";
 import inputmask from "./functions/inputmask.js";
+import inputPlaceholders from "./functions/inputPlaceholders.js";
 import mediaAdaptive from "./functions/mediaAdaptive.js";
 import productAvailability from "./functions/productAvailability.js";
 import handlerSelect from "./functions/select.js";
@@ -16,6 +17,7 @@ import sliders from "./functions/sliders.js";
 import spoller from "./functions/spollers.js";
 import tabs from "./functions/tabs.js";
 import toggle from "./functions/toggle.js";
+import toggleBonuseCheckout from "./functions/toggleBonuseCheckout.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   fixedCatalog();
@@ -36,6 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
   anchors();
   contentNavProduct();
   counter();
+  inputPlaceholders();
+  toggleBonuseCheckout();
 
   Fancybox.bind("[data-fancybox]", {
     closeButton: false,
@@ -54,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
-  // Fancybox.show([{ src: "#modal-review", type: "inline" }], {
+  // Fancybox.show([{ src: "#modal-auth", type: "inline" }], {
   //   closeButton: false,
   // });
 });

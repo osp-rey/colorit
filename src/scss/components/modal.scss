@@ -15,9 +15,24 @@
   color: black;
   border-radius: 20px;
   padding: 0 !important;
+  &._min {
+    width: 400px;
+  }
   &._shops {
     width: 660px;
+    .modal__container {
+      padding-right: 20px;
+      @include laptop-min {
+        padding-right: 15px;
+      }
+      @include tablet {
+        padding-right: 10px;
+      }
+    }
   }
+
+
+
   &__close {
     position: absolute;
     top: 20px;
@@ -36,7 +51,7 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding: 40px 20px 40px 40px;
+    padding: 40px;
     z-index: 1;
 
     @include laptop-min {
@@ -146,8 +161,31 @@
     grid-template-columns: 1fr;
     gap: 15px;
   }
+  &__form-link {
+    display: block;
+    margin: 5px auto;
+    text-decoration: underline;
+
+    transition: color .3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+  }
   &__form-submit {
     width: 100%;
     margin-top: 10px;
+  }
+  &__form-content {
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+
+    a {
+      text-decoration: underline;
+      color: var(--primary);
+
+      @include hover {
+        text-decoration: none;
+      }
+    }
   }
 }
