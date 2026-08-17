@@ -13,6 +13,6 @@
     transform: translateY(0);
   }
   &._active {
-    display: block;
+    display: block !important;
   }
 }

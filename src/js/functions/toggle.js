@@ -6,11 +6,11 @@ export default function toggle() {
   if (containers.length) {
     containers.forEach((container) => {
       const items = Array.from(
-        container.querySelectorAll("[data-toggle-item]"),
+        container.querySelectorAll(":scope > [data-toggle-content] > [data-toggle-item]"),
       ).filter((item) => window.getComputedStyle(item).display === "none");
-      const btn = container.querySelector("[data-toggle-btn]");
+      const btn = container.querySelector(":scope > [data-toggle-btn]");
       const btnStartText = btn.textContent || btn.dataset.startText;
-      const text = container.querySelector("[data-toggle-text]");
+      const text = container.querySelector(":scope > [data-toggle-content] [data-toggle-text]");
       const textLines = countLinesInElement(text);
       const itemTextBtn = btn.querySelector("[data-toggle-btn-text]");
 

@@ -31,9 +31,9 @@
     }
   }
 
-  span {
+  & > span {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 10px;
     &::before {
       content: "";
@@ -47,6 +47,89 @@
       transition:
         background-color 0.3s ease,
         border-color 0.3s ease;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      @include hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.form-control {
+  width: 100%;
+}
+.input-name {
+  color: var(--bombay);
+  margin-bottom: 10px;
+}
+
+.input {
+  --background: white;
+  --border: var(--geyser);
+  --color: black;
+  --background-a: white;
+  --border-a: black;
+  --color-a: black;
+
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  width: 100%;
+  outline: none;
+  min-height: 48px;
+  padding: 14px 20px;
+
+  font-size: 16px;
+
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background-color 0.3s ease;
+
+  &::placeholder {
+    font-size: 15px;
+    @include tablet-min {
+      font-size: 14px;
+    }
+  }
+  &:focus {
+    border-color: var(--border-a);
+    background-color: var(--background-a);
+    color: var(--color-a);
+  }
+}
+textarea.input {
+  resize: none;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 5px;
+
+  input {
+    display: none !important;
+      &:checked ~ label {
+    color: var(--primary);
+  }
+  }
+  label {
+    cursor: pointer;
+    font-size: 18px;
+    color: #e3e3e3;
+
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:hover ~ label,
+    &:checked ~ label {
+      color: var(--primary);
     }
   }
 }

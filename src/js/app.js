@@ -1,9 +1,11 @@
+import anchors from "./functions/anchors.js";
 import burger from "./functions/burger.js";
 import catsListToggle from "./functions/catsListToggle.js";
 import filtersShop from "./functions/filtersShop.js";
 import fixedCatalog from "./functions/fixed-catalog.js";
 import formSearch from "./functions/form-search.js";
 import headerScroll from "./functions/headerScroll.js";
+import inputmask from "./functions/inputmask.js";
 import mediaAdaptive from "./functions/mediaAdaptive.js";
 import productAvailability from "./functions/productAvailability.js";
 import handlerSelect from "./functions/select.js";
@@ -28,6 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
   toggle();
   mediaAdaptive();
   headerScroll();
+  inputmask();
+  anchors();
 
   Fancybox.bind("[data-fancybox]", {
     closeButton: false,
@@ -46,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
-  // Fancybox.show([{ src: "#modal-cities", type: "inline" }], {
+  // Fancybox.show([{ src: "#modal-review", type: "inline" }], {
   //   closeButton: false,
   // });
 });

@@ -141,4 +141,13 @@
       order: 2;
     }
   }
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  &__form-submit {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
