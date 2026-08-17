@@ -177,6 +177,20 @@
       --color: white;
     }
   }
+  &._outline-primary {
+    --border: var(--primary);
+    --background: white;
+    --color: var(--primary);
+    --border-h: var(--primary);
+    --background-h: var(--primary);
+    --color-h: white;
+
+    &._active {
+      --background: var(--primary);
+      --border: var(--primary);
+      --color: white;
+    }
+  }
   &._geyser {
     --border: var(--geyser);
     --background: var(--geyser);
@@ -184,6 +198,14 @@
     --border-h: var(--primary);
     --background-h: var(--primary);
     --color-h: white;
+  }
+  &._geyser-o {
+    --border: rgba(221, 225, 230, 0.5);
+    --background: rgba(221, 225, 230, 0.5);
+    --color: black;
+    --border-h: var(--geyser);
+    --background-h: var(--geyser);
+    --color-h: black;
   }
 
   i {

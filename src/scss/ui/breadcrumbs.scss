@@ -24,6 +24,13 @@
   }
 }
 .breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  i {
+    font-size: 10px;
+  }
 }
 .breadcrumb-separator {
   display: flex;

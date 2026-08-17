@@ -1,6 +1,8 @@
 import anchors from "./functions/anchors.js";
 import burger from "./functions/burger.js";
 import catsListToggle from "./functions/catsListToggle.js";
+import contentNavProduct from "./functions/contentNavProduct.js";
+import counter from "./functions/counter.js";
 import filtersShop from "./functions/filtersShop.js";
 import fixedCatalog from "./functions/fixed-catalog.js";
 import formSearch from "./functions/form-search.js";
@@ -32,6 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
   headerScroll();
   inputmask();
   anchors();
+  contentNavProduct();
+  counter();
 
   Fancybox.bind("[data-fancybox]", {
     closeButton: false,

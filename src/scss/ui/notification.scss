@@ -1,0 +1,50 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.notification {
+  padding: 30px;
+  border-radius: 16px;
+  background-color: var(--catskill);
+  margin-bottom: 40px;
+
+  @include tablet {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+  
+  &__wrap {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 30px;
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+  &__info {
+    flex: 1;
+    @include tablet {
+      flex: auto;
+      width: 100%;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__content {
+    margin: 10px 0px 0px 0px;
+    line-height: 120%;
+  }
+  &__btn {
+    flex-shrink: 0;
+    font-weight: 400;
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+}

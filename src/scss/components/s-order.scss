@@ -1,0 +1,121 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-order {
+  &__cart {
+    display: flex;
+    align-items: start;
+    gap: 40px;
+    @include laptop-min {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+  &__cart-products {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    flex: 1;
+    @include laptop-min {
+      flex: auto;
+      width: 100%;
+    }
+  }
+  &__sidebar {
+    width: 440px;
+    flex-shrink: 0;
+
+    @media (min-width: 1026px) {
+      position: sticky;
+      top: 90px;
+    }
+    @include laptop-middle {
+      width: 400px;
+    }
+    @include laptop-min {
+      flex: auto;
+      width: 100%;
+    }
+  }
+  &__sidebar-order {
+    padding: 30px;
+    border-radius: 16px;
+    background-color: var(--catskill);
+    @include laptop-middle {
+      padding: 20px;
+    }
+  }
+  &__sidebar-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  &__sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    li {
+      display: flex;
+      align-items: flex-end;
+
+      .item-name {
+      }
+      .item-line {
+        flex: 1;
+        border-bottom: 1px dashed var(--geyser);
+      }
+      .item-val {
+      }
+    }
+  }
+  &__sidebar-result {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 10px;
+
+    font-weight: 700;
+    font-size: 22px;
+
+    .item-line {
+      flex: 1;
+      border-bottom: 1px dashed var(--geyser);
+    }
+  }
+  &__sidebar-bonuse {
+    padding: 15px;
+    width: fit-content;
+    margin: 30px auto 0px auto;
+    border: 1px dashed #dde1e6;
+    background-color: white;
+    border-radius: 10px;
+
+    text-align: center;
+    font-size: 14px;
+
+    @include tablet {
+      margin-top: 20px;
+    }
+
+    .item-primary {
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--primary);
+    }
+  }
+  &__sidebar-btn {
+    width: 100%;
+    margin-top: 30px;
+
+    @include tablet {
+      margin-top: 20px;
+    }
+  }
+  &__sidebar-text {
+    margin: 30px 0px 0px 0px;
+    color: var(--bombay);
+    @include tablet {
+      margin-top: 20px;
+    }
+  }
+}

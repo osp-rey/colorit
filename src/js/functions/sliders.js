@@ -136,7 +136,7 @@ export default function sliders() {
             slidesPerView: 5,
             spaceBetween: 15,
           },
-          1200: {
+          1365: {
             slidesPerView: 4,
             spaceBetween: 15,
           },

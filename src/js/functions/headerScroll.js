@@ -9,10 +9,10 @@ export default function headerScroll() {
     function changeScroll() {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-      if (scrollTop > lastScrollTop && scrollTop > header.clientHeight) {
-        header.classList.add("_hide");
+      if (scrollTop > 0) {
+        header.classList.add("_scroll");
       } else {
-        header.classList.remove("_hide");
+        header.classList.remove("_scroll");
       }
 
       lastScrollTop = scrollTop;
