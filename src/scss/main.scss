@@ -30,6 +30,7 @@
 @use "./ui/toggle";
 @use "./ui/notification";
 @use "./ui/card-cart-product";
+@use "./ui/card-history-product";
 
 @use "./components/header";
 @use "./components/burger";
@@ -50,5 +51,6 @@
 @use "./components/s-looking";
 @use "./components/s-order";
 @use "./components/s-auth";
+@use "./components/s-account";
 
 @use "./components/footer";

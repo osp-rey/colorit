@@ -98,16 +98,15 @@
   padding: 10px 0px;
   transition: transform 0.4s ease;
   background-color: white;
-  border-bottom: 1px solid white;
   z-index: 100;
 
-  transition: border-color .3s ease;
+  transition: box-shadow 0.3s ease;
 
   &._hide {
     transform: translateY(-100%);
   }
   &._scroll {
-    border-color: var(--geyser);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
   }
 
   .form-s {

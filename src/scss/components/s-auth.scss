@@ -2,7 +2,9 @@
 @use '../base/media' as *;
 
 .s-auth {
+  padding: 30px 0px;
   background-color: var(--catskill);
+  min-height: 100vh;
   &__logo {
     display: block;
     width: 130px;
@@ -19,13 +21,48 @@
     margin: 0 auto;
   }
   &__title {
+    margin-bottom: 20px;
   }
-  &__tabs-nav {
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 20px;
   }
   &__form {
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      row-gap: 15px;
+
+      .form-control {
+        &._full {
+          grid-column: 2 span;
+        }
+      }
+    }
   }
   &__form-checks {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 span;
+    gap: 10px;
   }
   &__form-submit {
+    margin-top: 20px;
+    width: 100%;
+  }
+  &__form-content {
+    text-align: center;
+    font-size: 14px;
+
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+      @include hover {
+        text-decoration: none;
+      }
+    }
   }
 }

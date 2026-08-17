@@ -12,7 +12,22 @@
       margin-top: 20px;
     }
   }
+}
+.sect-p {
+  padding: 40px 0px;
+  &._first {
+    padding-top: 30px;
+  }
+  @include tablet {
+    padding: 30px 0px;
+    &._first {
+      padding-top: 20px;
+    }
+  }
 
+  &._catskill {
+    background-color: var(--catskill);
+  }
 }
 
 .sect-wrap {

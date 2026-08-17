@@ -2,9 +2,11 @@ export default function spoller() {
   const spollersArray = document.querySelectorAll("[data-spollers]");
   if (spollersArray.length > 0) {
     // Получение обычных слойлеров
-    const spollersRegular = Array.from(spollersArray).filter(function (item, index, self) {
-      return !item.dataset.spollers.split(",")[0];
-    });
+    const spollersRegular = Array.from(spollersArray).filter(
+      function (item, index, self) {
+        return !item.dataset.spollers.split(",")[0];
+      },
+    );
     // Инициализация обычных слойлеров
     if (spollersRegular.length) {
       initSpollers(spollersRegular);
@@ -40,7 +42,7 @@ export default function spoller() {
       let spollerTitles = spollersBlock.querySelectorAll("[data-spoller]");
       if (spollerTitles.length) {
         spollerTitles = Array.from(spollerTitles).filter(
-          (item) => item.closest("[data-spollers]") === spollersBlock
+          (item) => item.closest("[data-spollers]") === spollersBlock,
         );
         spollerTitles.forEach((spollerTitle) => {
           if (hideSpollerBody) {
@@ -61,25 +63,37 @@ export default function spoller() {
         const spollerTitle = el.closest("[data-spoller]");
         const spollersBlock = spollerTitle.closest("[data-spollers]");
         const oneSpoller = spollersBlock.hasAttribute("data-one-spoller");
+        const spollerItem = el.closest("[data-spoller-item]");
+
         const spollerSpeed = spollersBlock.dataset.spollersSpeed
           ? parseInt(spollersBlock.dataset.spollersSpeed)
           : 500;
         if (!spollersBlock.querySelectorAll("._slide").length) {
-          if (oneSpoller && !spollerTitle.classList.contains("_spoller-active")) {
+          if (
+            oneSpoller &&
+            !spollerTitle.classList.contains("_spoller-active")
+          ) {
             hideSpollersBody(spollersBlock);
           }
           spollerTitle.classList.toggle("_spoller-active");
+          if (spollerItem)
+            spollerItem.classList.toggle("_spoller-item-active");
           _slideToggle(spollerTitle.nextElementSibling, spollerSpeed);
         }
         e.preventDefault();
       }
     }
     function hideSpollersBody(spollersBlock) {
-      const spollerActiveTitle = spollersBlock.querySelector("[data-spoller]._spoller-active");
+      const spollerActiveTitle = spollersBlock.querySelector(
+        "[data-spoller]._spoller-active",
+      );
       const spollerSpeed = spollersBlock.dataset.spollersSpeed
         ? parseInt(spollersBlock.dataset.spollersSpeed)
         : 500;
-      if (spollerActiveTitle && !spollersBlock.querySelectorAll("._slide").length) {
+      if (
+        spollerActiveTitle &&
+        !spollersBlock.querySelectorAll("._slide").length
+      ) {
         spollerActiveTitle.classList.remove("_spoller-active");
         _slideUp(spollerActiveTitle.nextElementSibling, spollerSpeed);
       }
@@ -124,7 +138,16 @@ export default function spoller() {
       });
       // Получаем уникальные брейкпоинты
       let mdQueries = breakpointsArray.map(function (item) {
-        return "(" + item.type + "-width: " + item.value + "px)," + item.value + "," + item.type;
+        return (
+          "(" +
+          item.type +
+          "-width: " +
+          item.value +
+          "px)," +
+          item.value +
+          "," +
+          item.type
+        );
       });
       mdQueries = uniqArray(mdQueries);
       const mdQueriesArray = [];
@@ -182,7 +205,7 @@ export default function spoller() {
             detail: {
               target: target,
             },
-          })
+          }),
         );
       }, duration);
     }
@@ -219,7 +242,7 @@ export default function spoller() {
             detail: {
               target: target,
             },
-          })
+          }),
         );
       }, duration);
     }
