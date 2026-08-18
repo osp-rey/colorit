@@ -1,0 +1,221 @@
+.btn-p {
+  --background: transparent;
+  --border: var(--geyser);
+  --color: var(--black);
+  --background: transparent;
+  --border-h: var(--primary);
+  --color-h: var(--primary);
+  display: flex;
+  align-items: center;
+  outline: none;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  cursor: pointer;
+  border-radius: 50px;
+  gap: 10px;
+  padding: 13px 15px;
+  color: var(--color);
+  user-select: none;
+  width: fit-content;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-p .rect {
+  position: relative;
+  width: 16px;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.btn-p .rect .num {
+  --background: var(--primary);
+  --color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 9px;
+  line-height: 90%;
+  color: var(--color);
+  background-color: var(--background);
+}
+
+.btn-p i {
+  font-size: 15px;
+}
+
+.btn-m {
+  --border: var(--primary);
+  --background: var(--primary);
+  --color: white;
+  --border-h: var(--primary-h);
+  --background-h: var(--primary-h);
+  --color-h: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: fit-content;
+  border: 1px solid var(--border);
+  outline: none;
+  background-color: var(--background);
+  padding: 12px 25px;
+  border-radius: 50px;
+  gap: 10px;
+  font-size: 14px;
+  user-select: none;
+  color: var(--color);
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-m._outline {
+  --border: var(--geyser);
+  --background: transparent;
+  --color: black;
+  --border-h: var(--primary);
+  --background-h: transparent;
+  --color-h: black;
+}
+
+.btn-m._outline._active {
+  --background: var(--primary);
+  --border: var(--primary);
+  --color: white;
+}
+
+.btn-m._catskill {
+  --border: var(--catskill);
+  --background: var(--catskill);
+  --color: black;
+  --border-h: var(--geyser);
+  --background-h: var(--geyser);
+  --color-h: black;
+}
+
+.btn-m .i-arrow {
+  font-size: 8px;
+}
+
+.btn-s {
+  --border: var(--primary);
+  --background: var(--primary);
+  --color: white;
+  --border-h: var(--primary-h);
+  --background-h: var(--primary-h);
+  --color-h: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: fit-content;
+  border: 1px solid var(--border);
+  outline: none;
+  background-color: var(--background);
+  padding: 14px 25px;
+  border-radius: 50px;
+  gap: 10px;
+  font-weight: 700;
+  user-select: none;
+  color: var(--color);
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-s._outline {
+  --border: var(--geyser);
+  --background: transparent;
+  --color: black;
+  --border-h: var(--primary);
+  --background-h: transparent;
+  --color-h: black;
+}
+
+.btn-s._outline._active {
+  --background: var(--primary);
+  --border: var(--primary);
+  --color: white;
+}
+
+.btn-s._outline-primary {
+  --border: var(--primary);
+  --background: white;
+  --color: var(--primary);
+  --border-h: var(--primary);
+  --background-h: var(--primary);
+  --color-h: white;
+}
+
+.btn-s._outline-primary._active {
+  --background: var(--primary);
+  --border: var(--primary);
+  --color: white;
+}
+
+.btn-s._geyser {
+  --border: var(--geyser);
+  --background: var(--geyser);
+  --color: black;
+  --border-h: var(--primary);
+  --background-h: var(--primary);
+  --color-h: white;
+}
+
+.btn-s._geyser-o {
+  --border: rgba(221, 225, 230, 0.5);
+  --background: rgba(221, 225, 230, 0.5);
+  --color: black;
+  --border-h: var(--geyser);
+  --background-h: var(--geyser);
+  --color-h: black;
+}
+
+.btn-s i {
+  font-size: 16px;
+}
+
+@media (any-hover: hover) {
+  .btn-p:hover {
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+    color: var(--color-h);
+  }
+
+  .btn-m:hover {
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+    color: var(--color-h);
+  }
+
+  .btn-s:hover {
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+    color: var(--color-h);
+  }
+}
+
+@media (hover: none) {
+  .btn-p:active {
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+    color: var(--color-h);
+  }
+
+  .btn-m:active {
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+    color: var(--color-h);
+  }
+
+  .btn-s:active {
+    background-color: var(--background-h);
+    border-color: var(--border-h);
+    color: var(--color-h);
+  }
+}

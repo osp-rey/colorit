@@ -1,0 +1,32 @@
+.s-assortment__slide {
+  display: grid !important;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 1199px) {
+  .s-assortment {
+    overflow: hidden;
+  }
+
+  .s-assortment__slider {
+    overflow: visible !important;
+  }
+
+  .s-assortment__slide {
+    width: 220px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1025px) {
+  .s-assortment__slide {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 575px) {
+  .s-assortment__slide {
+    width: 140px !important;
+  }
+}

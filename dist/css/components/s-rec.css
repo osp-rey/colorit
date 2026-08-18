@@ -1,0 +1,35 @@
+.s-rec__slider .swiper-slide {
+  box-sizing: border-box;
+  height: auto !important;
+}
+
+.s-rec__slider .swiper-slide .card-product-r {
+  height: 100%;
+}
+
+@media (max-width: 1025px) {
+  .s-rec__slider {
+    overflow: visible !important;
+  }
+
+  .s-rec__slider .swiper-slide {
+    width: 220px !important;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-rec .container {
+    margin: 0;
+  }
+
+  .s-rec__slider .swiper-slide {
+    width: 200px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .s-rec__slider .swiper-slide {
+    width: 170px !important;
+  }
+}

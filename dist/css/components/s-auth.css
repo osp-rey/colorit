@@ -1,0 +1,81 @@
+.s-auth {
+  padding: 30px 0px;
+  background-color: var(--catskill);
+  min-height: 100vh;
+}
+
+.s-auth__logo {
+  display: block;
+  width: 130px;
+  margin: 0px auto 40px auto;
+}
+
+.s-auth__body {
+  width: 600px;
+  border-radius: 20px;
+  background-color: white;
+  padding: 40px;
+  margin: 0 auto;
+}
+
+.s-auth__title {
+  margin-bottom: 20px;
+}
+
+.s-auth__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.s-auth__form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  row-gap: 15px;
+}
+
+.s-auth__form .form-grid .form-control._full {
+  grid-column: 2 span;
+}
+
+.s-auth__form-checks {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2 span;
+  gap: 10px;
+}
+
+.s-auth__form-submit {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.s-auth__form-content {
+  text-align: center;
+  font-size: 14px;
+}
+
+.s-auth__form-content a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+@media (max-width: 1025px) {
+  .s-auth__logo {
+    margin-bottom: 30px;
+  }
+}
+
+@media (any-hover: hover) {
+  .s-auth__form-content a:hover {
+    text-decoration: none;
+  }
+}
+
+@media (hover: none) {
+  .s-auth__form-content a:active {
+    text-decoration: none;
+  }
+}

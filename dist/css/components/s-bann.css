@@ -1,0 +1,279 @@
+.s-bann .breadcrumbs {
+  margin-bottom: 15px;
+}
+
+.s-bann__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px 40px 40px;
+  border-radius: 16px;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.s-bann__wrap._top {
+  padding-top: 40px;
+}
+
+.s-bann__wrap-mob-bg {
+  position: absolute;
+  inset: 0 0 315px 0;
+  border-radius: 16px;
+  z-index: -1;
+}
+
+.s-bann__info {
+  flex: 0 1 500px;
+}
+
+.s-bann__content {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.s-bann__list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.s-bann__list li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 20px;
+  background: rgba(221, 225, 230, 0.5);
+  width: fit-content;
+  border-radius: 50px;
+  font-size: 18px;
+}
+
+.s-bann__list li img {
+  display: block;
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.s-bann__btn {
+  margin-top: 20px;
+}
+
+.s-bann__form-wrap {
+  border-radius: 20px;
+  padding: 40px;
+  background-color: white;
+  width: 510px;
+  margin-right: 60px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(40px);
+}
+
+.s-bann__form-title {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.s-bann__form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.s-bann__form .check-item {
+  margin: 5px 0px;
+}
+
+.s-bann__form-submit {
+  width: 100%;
+}
+
+.s-bann__picture {
+  display: block;
+  width: 675px;
+  margin-right: 60px;
+  max-width: 100%;
+}
+
+.s-bann__picture img {
+  display: block;
+  width: 100%;
+}
+
+.s-bann__block-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  background-color: var(--geyser);
+  padding: 40px;
+  border-radius: 16px;
+}
+
+.s-bann__block-content .content-box {
+  flex: 1 1 calc(50% - 40px);
+  line-height: 140%;
+}
+
+.s-bann__adv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  flex: 0 1 600px;
+}
+
+.s-bann__adv-item {
+  padding: 16px;
+  border-radius: 10px;
+  padding: 16px;
+  background-color: white;
+  box-shadow: 0 0 20px 0 rgba(27, 36, 45, 0.1);
+}
+
+.s-bann__adv-item .item-icon {
+  display: block;
+  width: 14px;
+  margin-bottom: 10px;
+}
+
+.s-bann__adv-item .item-title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.s-bann__adv-item .item-content {
+  margin: 10px 0px 0px 0px;
+  line-height: 140%;
+}
+
+@media (min-width: 577px) {
+  .s-bann__wrap-mob-bg {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1365px) {
+  .s-bann__form-wrap {
+    margin-right: 0;
+  }
+
+  .s-bann__picture {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .s-bann__wrap {
+    padding: 0px 20px 20px 20px;
+  }
+
+  .s-bann__wrap._top {
+    padding-top: 20px;
+  }
+
+  .s-bann__adv-item .item-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .s-bann__wrap {
+    align-items: start;
+  }
+
+  .s-bann__wrap {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  .s-bann__info {
+    flex: auto;
+  }
+
+  .s-bann__content {
+    font-size: 16px;
+  }
+
+  .s-bann__list li {
+    font-size: 16px;
+  }
+
+  .s-bann__form-wrap {
+    padding: 25px;
+    transform: translateY(0);
+    width: 100%;
+    padding: 40px 25px;
+  }
+
+  .s-bann__picture {
+    margin: 0 auto;
+  }
+
+  .s-bann__block-content {
+    padding: 30px 20px;
+    gap: 30px;
+    row-gap: 15px;
+  }
+
+  .s-bann__adv-grid {
+    flex: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-bann__content {
+    margin-top: 10px;
+  }
+
+  .s-bann__form-wrap {
+    border-radius: 12px;
+  }
+
+  .s-bann__block-content .content-box {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .s-bann__wrap {
+    background: none !important;
+    padding: 10px;
+  }
+
+  .s-bann__content {
+    font-size: 14px;
+  }
+
+  .s-bann__list {
+    gap: 5px;
+  }
+
+  .s-bann__list li {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .s-bann__form-wrap {
+    padding: 10px;
+  }
+
+  .s-bann__form-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .s-bann__adv-grid {
+    gap: 5px;
+    grid-template-columns: 1fr;
+  }
+
+  .s-bann__adv-item {
+    padding: 12px;
+  }
+
+  .s-bann__adv-item .item-title {
+    font-size: 16px;
+  }
+}

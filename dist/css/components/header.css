@@ -1,0 +1,370 @@
+.header-t {
+  background-color: var(--black);
+  padding: 13px 0px;
+  color: white;
+}
+
+.header-t__wrap {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  gap: 20px;
+}
+
+.header-t__location {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 14px;
+  transition: opacity 0.3s ease;
+}
+
+.header-t__location .icon-location {
+  flex-shrink: 0;
+  font-size: 14px;
+  color: var(--primary);
+}
+
+.header-t__nav {
+  margin: 0 auto;
+}
+
+.header-t__list {
+  display: flex;
+  gap: 40px;
+}
+
+.header-t__list a {
+  transition: color 0.3s ease;
+}
+
+.header-t__contacts {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.header-t__tel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 17px;
+  transition: color 0.3s ease;
+}
+
+.header-t__tel .icon-tel {
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+.header-t__worktime {
+  font-size: 15px;
+  opacity: 0.6;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 10px 0px;
+  transition: transform 0.4s ease;
+  background-color: white;
+  z-index: 100;
+  transition: box-shadow 0.3s ease;
+}
+
+.header._hide {
+  transform: translateY(-100%);
+}
+
+.header._scroll {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.header .form-s {
+  flex: 1;
+  width: auto;
+}
+
+.header__wrap {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header__logo {
+  display: block;
+  width: 130px;
+}
+
+.header__logo img {
+  display: block;
+  width: 100%;
+}
+
+.header__catalog-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--primary);
+  padding: 14px 20px;
+  border-radius: 50px;
+  user-select: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.header__catalog-btn i {
+  flex-shrink: 0;
+  font-size: 11px;
+}
+
+.header__buttons-menu {
+  display: flex;
+  gap: 15px;
+}
+
+.header__buttons-menu .btn-p {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  min-height: 48px;
+}
+
+.header__buttons-menu .btn-p .item-info-num {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 100%;
+  color: black;
+}
+
+.header__buttons-menu .btn-p .item-info-text {
+  font-size: 12px;
+  color: var(--bombay);
+  line-height: 100%;
+}
+
+.header__buttons-menu .btn-p i {
+  color: black;
+}
+
+.header__burger-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: white;
+  font-size: 11px;
+  transition: background-color 0.3s ease;
+}
+
+.header-nav {
+  box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.1);
+}
+
+.header-nav__slider {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.header-nav__slider .slider-arrow {
+  position: absolute;
+  z-index: 10;
+}
+
+.header-nav__slider .slider-arrow._prev {
+  left: 0;
+}
+
+.header-nav__slider .slider-arrow._next {
+  right: 0;
+}
+
+.header-nav__slider .slider-arrow.swiper-button-disabled {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.header-nav__slider .slider-arrow.swiper-button-disabled + .shadow-decor {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header-nav__slider .shadow-decor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 60%);
+  z-index: 2;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.header-nav__slider .shadow-decor._prev {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.header-nav__slider .shadow-decor._next {
+  right: 0;
+}
+
+.header-nav__slide {
+  padding: 15px 0px;
+  width: fit-content;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+@media (min-width: 1026px) {
+  .header__buttons-menu .btn-p._lap {
+    display: none !important;
+  }
+
+  .header__burger-btn {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1365px) {
+  .header-t__list {
+    gap: 20px;
+  }
+
+  .header-t__tel {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .header-t__contacts {
+    align-items: end;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1025px) {
+  .header-t {
+    position: absolute;
+    left: -9999px;
+    z-index: -9999;
+    visibility: hidden;
+  }
+
+  .header__wrap {
+    gap: 10px;
+  }
+
+  .header__catalog-btn {
+    display: none;
+  }
+
+  .header__form-s {
+    display: none;
+  }
+
+  .header__social {
+    display: none;
+  }
+
+  .header__buttons-menu {
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  .header__buttons-menu .btn-p {
+    min-height: auto;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+
+  .header__buttons-menu .btn-p span,
+  .header__buttons-menu .btn-p .item-info {
+    display: none;
+  }
+
+  .header__buttons-menu .btn-p .rect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header__buttons-menu .btn-p .rect i {
+    font-size: 17px;
+  }
+
+  .header__buttons-menu .btn-p .rect .num {
+    top: 3px;
+    right: 3px;
+  }
+
+  .header-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__logo {
+    width: 95px;
+  }
+}
+
+@media (any-hover: hover) {
+  .header-t__location:hover {
+    opacity: 0.7;
+  }
+
+  .header-t__list a:hover {
+    color: var(--primary);
+  }
+
+  .header-t__tel:hover {
+    color: var(--primary);
+  }
+
+  .header__catalog-btn:hover {
+    background-color: var(--primary-h);
+  }
+
+  .header__burger-btn:hover {
+    background-color: var(--primary-h);
+  }
+
+  .header-nav__slide:hover {
+    color: var(--primary);
+  }
+}
+
+@media (hover: none) {
+  .header-t__location:active {
+    opacity: 0.7;
+  }
+
+  .header-t__list a:active {
+    color: var(--primary);
+  }
+
+  .header-t__tel:active {
+    color: var(--primary);
+  }
+
+  .header__catalog-btn:active {
+    background-color: var(--primary-h);
+  }
+
+  .header__burger-btn:active {
+    background-color: var(--primary-h);
+  }
+
+  .header-nav__slide:active {
+    color: var(--primary);
+  }
+}

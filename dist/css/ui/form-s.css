@@ -1,0 +1,131 @@
+.form-s {
+  position: relative;
+  border-radius: 50px;
+  border: 1px solid var(--black);
+}
+
+.form-s._open .form-s__body {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.form-s__wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  padding: 6px 5px 6px 20px;
+}
+
+.form-s__input {
+  outline: none;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  flex: 1;
+  font-size: 16px;
+}
+
+.form-s__input::placeholder {
+  font-size: 14px;
+  color: var(--bombay);
+}
+
+.form-s__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  cursor: pointer;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.form-s__body {
+  position: absolute;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  left: 0;
+  right: 0;
+  border-radius: 12px;
+  padding: 10px 0px;
+  margin-top: 10px;
+  background-color: white;
+  z-index: 30;
+  min-width: 500px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+}
+
+.form-s__body-container {
+  padding: 0 20px;
+  width: 100%;
+}
+
+.form-s__cats {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-s__cats li {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 0px;
+  font-size: 15px;
+  line-height: 120%;
+  color: var(--bombay);
+}
+
+.form-s__cats li a {
+  transition: color 0.3s ease;
+}
+
+.form-s__cats .item-el {
+  color: var(--black);
+}
+
+.form-s__res {
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .form-s__wrap {
+    padding: 4px 4px 4px 16px;
+  }
+
+  .form-s__submit {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+}
+
+@media (any-hover: hover) {
+  .form-s__submit:hover {
+    background-color: var(--primary-h);
+  }
+
+  .form-s__cats li a:hover {
+    color: var(--primary);
+  }
+}
+
+@media (hover: none) {
+  .form-s__submit:active {
+    background-color: var(--primary-h);
+  }
+
+  .form-s__cats li a:active {
+    color: var(--primary);
+  }
+}

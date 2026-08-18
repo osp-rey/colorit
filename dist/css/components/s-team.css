@@ -1,0 +1,25 @@
+.s-team__slider .swiper-slide {
+  box-sizing: border-box;
+  height: auto !important;
+}
+
+.s-team__slider .swiper-slide .card-team {
+  height: 100%;
+}
+
+@media (max-width: 1025px) {
+  .s-team {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-team__slider {
+    overflow: visible !important;
+  }
+
+  .s-team__slider .swiper-slide {
+    width: 390px !important;
+    max-width: 100%;
+  }
+}

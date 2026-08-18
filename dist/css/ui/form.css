@@ -1,0 +1,252 @@
+.check-item {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  width: fit-content;
+}
+
+.check-item input[type=checkbox] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+}
+
+.check-item input[type=checkbox]:checked + span::before {
+  background: url("../img/check-white.svg") center/10px auto no-repeat;
+  background-color: var(--primary) !important;
+  border-color: var(--primary);
+}
+
+.check-item > span {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+
+.check-item > span::before {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: 1px solid var(--geyser);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.check-item > span a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.input-name {
+  color: var(--bombay);
+  margin-bottom: 10px;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-placeholder {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 16px;
+  color: var(--bombay);
+}
+
+.input-placeholder i {
+  font-size: 16px;
+  transform: translateY(-2px);
+}
+
+.input {
+  --background: white;
+  --border: var(--geyser);
+  --color: black;
+  --background-a: white;
+  --border-a: black;
+  --color-a: black;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  width: 100%;
+  outline: none;
+  min-height: 48px;
+  padding: 14px 20px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.input::placeholder {
+  font-size: 15px;
+}
+
+.input:focus {
+  border-color: var(--border-a);
+  background-color: var(--background-a) !important;
+  color: var(--color-a);
+}
+
+.input._date {
+  padding-right: 40px;
+  background: url("../img/input-date.svg") right 15px center/14px auto no-repeat;
+  background-color: var(--background) !important;
+}
+
+.input._transparent {
+  --background: transparent;
+  --border: rgba(0, 0, 0, 0.1);
+  --color: black;
+  --background-a: transparent;
+  --border-a: black;
+  --color-a: black;
+}
+
+textarea.input {
+  resize: none;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.rating input {
+  display: none !important;
+}
+
+.rating input:checked ~ label {
+  color: var(--primary);
+}
+
+.rating label {
+  cursor: pointer;
+  font-size: 18px;
+  color: #e3e3e3;
+  transition: color 0.3s ease;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating label:checked ~ label {
+  color: var(--primary);
+}
+
+.choice-item {
+  position: relative;
+}
+
+.choice-item input[type=radio] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+}
+
+.choice-item input[type=radio]:checked + .item-body {
+  border-color: black;
+}
+
+.choice-item .item-body {
+  border: 1px solid var(--geyser);
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 100%;
+  user-select: none;
+  transition: border-color 0.3s ease;
+}
+
+.choice-item .item-title {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.choice-item .item-text {
+  line-height: 120%;
+  margin: 10px 0px 0px 0px;
+}
+
+.form-notification {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  margin-top: 25px;
+  color: var(--bombay);
+}
+
+.form-notification i {
+  font-size: 20px;
+  flex-shrink: 0;
+  color: #5b5b5b;
+}
+
+@media (max-width: 767px) {
+  .input {
+    min-height: 40px;
+    padding: 10px 15px;
+  }
+
+  .choice-item .item-body {
+    padding: 15px;
+  }
+
+  .choice-item .item-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .input-name {
+    margin-bottom: 5px;
+  }
+
+  .input::placeholder {
+    font-size: 14px;
+  }
+}
+
+@media (any-hover: hover) {
+  .check-item:hover span::before {
+    border-color: var(--primary);
+  }
+
+  .check-item > span a:hover {
+    text-decoration: none;
+  }
+
+  .choice-item .item-body:hover {
+    border-color: black;
+  }
+}
+
+@media (hover: none) {
+  .check-item:active span::before {
+    border-color: var(--primary);
+  }
+
+  .check-item > span a:active {
+    text-decoration: none;
+  }
+
+  .choice-item .item-body:active {
+    border-color: black;
+  }
+}

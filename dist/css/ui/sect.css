@@ -1,0 +1,169 @@
+.sect-m {
+  margin: 40px 0px;
+}
+
+.sect-m._first {
+  margin-top: 30px;
+}
+
+.sect-p {
+  padding: 40px 0px;
+}
+
+.sect-p._first {
+  padding-top: 30px;
+}
+
+.sect-p._catskill {
+  background-color: var(--catskill);
+}
+
+.sect-wrap {
+  padding: 25px 20px;
+  border-radius: 20px;
+}
+
+.sect-wrap._hidden {
+  overflow: hidden;
+}
+
+.sect-wrap._catskill {
+  background-color: var(--catskill);
+}
+
+.sect-wrap .slider-arrow._prev {
+  transform: translateX(-75px);
+}
+
+.sect-wrap .slider-arrow._next {
+  transform: translateX(75px);
+}
+
+.sect-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.sect-head__btn {
+  flex-shrink: 0;
+}
+
+.sect-head .breadcrumbs {
+  margin-bottom: 15px;
+}
+
+.sect-nav {
+  margin-bottom: 30px;
+}
+
+.sect-nav .swiper-slide {
+  box-sizing: border-box;
+  width: fit-content !important;
+}
+
+.sect-nav .sect-nav-btn._active {
+  pointer-events: none;
+}
+
+.sect-nav .sect-nav-side {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  width: 50px;
+  z-index: 10;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sect-nav .sect-nav-side.swiper-button-lock,
+.sect-nav .sect-nav-side.swiper-button-disabled {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sect-nav .sect-nav-side._prev {
+  left: -10px;
+}
+
+.sect-nav .sect-nav-side._prev .item-wrap::before {
+  transform: rotate(180deg);
+}
+
+.sect-nav .sect-nav-side._next {
+  right: -10px;
+}
+
+.sect-nav .sect-nav-side .item-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.sect-nav .sect-nav-side .item-wrap::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: linear-gradient(90deg, rgba(244, 247, 250, 0) 0%, rgb(244, 247, 250) 60%);
+  z-index: 1;
+}
+
+.sect-btn-m {
+  width: 100%;
+  margin-top: 15px;
+}
+
+@media (min-width: 577px) {
+  .sect-btn-m {
+    display: none;
+  }
+}
+
+@media (max-width: 1025px) {
+  .sect-wrap {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 767px) {
+  .sect-m {
+    margin: 30px 0px;
+  }
+
+  .sect-m._first {
+    margin-top: 20px;
+  }
+
+  .sect-p {
+    padding: 30px 0px;
+  }
+
+  .sect-p._first {
+    padding-top: 20px;
+  }
+
+  .sect-head {
+    margin-bottom: 15px;
+  }
+
+  .sect-nav {
+    margin-bottom: 15px;
+  }
+
+  .sect-nav .sect-nav-btn {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+}
+
+@media (max-width: 575px) {
+  .sect-wrap {
+    padding: 30px 10px;
+  }
+
+  .sect-head__btn {
+    display: none;
+  }
+}

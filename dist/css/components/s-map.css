@@ -1,0 +1,16 @@
+.s-map__wrap {
+  border-radius: 16px;
+  height: 550px;
+  overflow: hidden;
+}
+
+.s-map__wrap iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 767px) {
+  .s-map__wrap {
+    height: 400px;
+  }
+}

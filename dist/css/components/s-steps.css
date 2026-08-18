@@ -1,0 +1,130 @@
+.s-steps__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.s-steps__item {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  border-radius: 16px;
+  padding: 30px;
+  background-color: white;
+  flex: 1 1 calc(33% - 20px);
+}
+
+.s-steps__item .item-tag {
+  padding: 8px 16px;
+  width: fit-content;
+  border-radius: 50px;
+  color: var(--bombay);
+  background-color: var(--catskill);
+  margin-bottom: 20px;
+}
+
+.s-steps__item .item-wrap {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+
+.s-steps__item .item-info {
+  flex: 1;
+}
+
+.s-steps__item .item-title {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0px 0px 10px 0px;
+}
+
+.s-steps__item .item-content {
+  margin: 0px 0px 20px 0px;
+}
+
+.s-steps__item .item-content:last-child {
+  margin-bottom: 0 !important;
+}
+
+.s-steps__item .item-btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+.s-steps__item .item-img {
+  display: block;
+  width: 160px;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 rgba(27, 36, 45, 0.1);
+}
+
+@media (min-width: 1026px) {
+  .s-steps__item .item-mob {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .s-steps__wrapper._nowrap {
+    flex-wrap: nowrap;
+  }
+
+  .s-steps__item._big {
+    flex-basis: 540px;
+  }
+}
+
+@media (max-width: 1365px) {
+  .s-steps__item .item-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .s-steps__item {
+    flex-basis: calc(50% - 10px);
+  }
+
+  .s-steps__item .item-desk {
+    display: none !important;
+  }
+
+  .s-steps__item .item-wrap {
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .s-steps__item .item-img {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-steps__wrapper {
+    gap: 10px;
+  }
+
+  .s-steps__item {
+    padding: 15px;
+  }
+
+  .s-steps__item .item-tag {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .s-steps__item .item-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 575px) {
+  .s-steps__item {
+    flex-basis: 100%;
+  }
+}

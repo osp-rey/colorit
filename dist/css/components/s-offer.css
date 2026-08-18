@@ -1,0 +1,28 @@
+.s-offer__slide {
+  overflow: hidden;
+  border-radius: 16px;
+  aspect-ratio: 1/0.5;
+}
+
+.s-offer__slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s linear;
+}
+
+@media (any-hover: hover) {
+  .s-offer__slide:hover img {
+    transform: scale(1.08);
+  }
+}
+
+@media (hover: none) {
+  .s-offer__slide:active img {
+    transform: scale(1.08);
+  }
+}

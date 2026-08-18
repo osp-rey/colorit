@@ -1,0 +1,55 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: var(--bombay);
+}
+
+.breadcrumbs a {
+  transition: color 0.3s ease;
+}
+
+.breadcrumbs._white {
+  color: white;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.breadcrumb-item i {
+  font-size: 10px;
+}
+
+.breadcrumb-separator {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+@media (max-width: 767px) {
+  .breadcrumbs {
+    font-size: 12px;
+    gap: 5px;
+  }
+
+  .breadcrumb-separator {
+    font-size: 10px;
+  }
+}
+
+@media (any-hover: hover) {
+  .breadcrumbs a:hover {
+    color: var(--black);
+  }
+}
+
+@media (hover: none) {
+  .breadcrumbs a:active {
+    color: var(--black);
+  }
+}

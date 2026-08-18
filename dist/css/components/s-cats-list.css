@@ -1,0 +1,136 @@
+.s-cats-list__slider-wrap {
+  position: relative;
+  padding-bottom: 20px;
+  max-width: 100%;
+}
+
+.s-cats-list__slider-wrap._open .s-cats-list__slider-wrap-inside {
+  margin-bottom: 30px;
+}
+
+.s-cats-list__slider-wrap._open .s-cats-list__slider-wrap-inside::before {
+  opacity: 0;
+}
+
+.s-cats-list__slider-wrap-inside {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  width: 100%;
+  max-height: 180px;
+  transition: max-height 0.3s ease, margin 0.3s ease;
+}
+
+.s-cats-list__slider-wrap-inside::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+
+.s-cats-list__slider {
+  position: relative;
+}
+
+.s-cats-list__slide {
+  box-sizing: border-box;
+}
+
+.s-cats-list__slide a {
+  transition: color 0.3s ease;
+}
+
+.s-cats-list__slide-title {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 120%;
+}
+
+.s-cats-list__slide-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 15px;
+}
+
+.s-cats-list__btn-more {
+  position: absolute;
+  white-space: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  z-index: 15;
+}
+
+.s-cats-list__btn-more .i-arrow {
+  transition: transform 0.3s ease;
+}
+
+.s-cats-list__btn-more:not(._active) {
+  background-color: white !important;
+}
+
+.s-cats-list__btn-more._active .i-arrow {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 1025px) {
+  .s-cats-list {
+    overflow: hidden;
+  }
+
+  .s-cats-list .container {
+    padding: 0;
+  }
+
+  .s-cats-list__slider-wrap-inside {
+    padding: 0 15px;
+  }
+
+  .s-cats-list__slider {
+    overflow: visible !important;
+  }
+
+  .s-cats-list__slide {
+    overflow: visible !important;
+    width: 250px !important;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-cats-list__slider-wrap-inside {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .s-cats-list__slide {
+    width: 170px !important;
+  }
+
+  .s-cats-list__slide-title {
+    font-size: 15px;
+  }
+
+  .s-cats-list__slide-list {
+    font-size: 13px;
+  }
+}
+
+@media (any-hover: hover) {
+  .s-cats-list__slide a:hover {
+    color: var(--primary);
+  }
+}
+
+@media (hover: none) {
+  .s-cats-list__slide a:active {
+    color: var(--primary);
+  }
+}

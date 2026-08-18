@@ -1,0 +1,20 @@
+.cats-slider {
+  position: relative;
+}
+
+@media (max-width: 1025px) {
+  .cats-slider {
+    overflow: visible !important;
+  }
+
+  .cats-slider .swiper-slide {
+    width: 220px !important;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .cats-slider .swiper-slide {
+    width: 140px !important;
+  }
+}

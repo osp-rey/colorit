@@ -1,0 +1,30 @@
+.s-reminder__slide {
+  padding: 30px;
+  background-color: white;
+  border-radius: 16px;
+  height: auto !important;
+  box-sizing: border-box;
+}
+
+.s-reminder__slide .item-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--catskill);
+  width: 34px;
+  height: 34px;
+  color: var(--bombay);
+  line-height: 120%;
+  text-align: center;
+}
+
+.s-reminder__slide .content-box {
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .s-reminder__slide {
+    padding: 20px;
+  }
+}

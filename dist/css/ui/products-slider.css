@@ -1,0 +1,26 @@
+.products-slider .swiper-slide {
+  box-sizing: border-box;
+  height: auto !important;
+  transform: none !important;
+}
+
+.products-slider .swiper-slide .card-product {
+  height: 100%;
+}
+
+@media (max-width: 1199px) {
+  .products-slider {
+    overflow: visible !important;
+  }
+
+  .products-slider .swiper-slide {
+    width: 270px !important;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .products-slider .swiper-slide {
+    width: 180px !important;
+  }
+}

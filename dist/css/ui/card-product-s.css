@@ -1,0 +1,129 @@
+.card-product-s {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-top: 1px solid var(--athens);
+}
+
+.card-product-s__gallery {
+  display: block;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.card-product-s__gallery img {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.card-product-s__body {
+  flex: 1;
+}
+
+.card-product-s__title {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  line-height: 140%;
+  transition: color 0.3s ease;
+}
+
+.card-product-s__price {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  gap: 10px;
+}
+
+.card-product-s__price .wrap-price {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-product-s__price .item-price {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.card-product-s__price .item-old-price {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: var(--bombay);
+}
+
+.card-product-s__price .item-discount {
+  padding: 3px 8px;
+  border-radius: 12px 0;
+  flex-shrink: 0;
+  background-color: var(--black);
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 140%;
+}
+
+.card-product-s__price .item-price-s {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.card-product-s__price .item-price-s strong {
+  font-weight: 600;
+}
+
+.card-product-s__price .item-text {
+  font-size: 12px;
+  color: var(--bombay);
+  margin-top: 2px;
+}
+
+.card-product-s__cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+@media (any-hover: hover) {
+  .card-product-s:hover .card-product-s__cart-btn {
+    opacity: 1;
+  }
+
+  .card-product-s__title:hover {
+    color: var(--primary);
+  }
+
+  .card-product-s__cart-btn:hover {
+    background-color: var(--primary-h);
+  }
+}
+
+@media (hover: none) {
+  .card-product-s:active .card-product-s__cart-btn {
+    opacity: 1;
+  }
+
+  .card-product-s__title:active {
+    color: var(--primary);
+  }
+
+  .card-product-s__cart-btn:active {
+    background-color: var(--primary-h);
+  }
+}

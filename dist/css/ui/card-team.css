@@ -1,0 +1,80 @@
+.card-team {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-team__gallery {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: linear-gradient(180deg, #f4f7fa 0%, #e0e6ed 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  height: 400px;
+  transition: height 0.3s ease;
+}
+
+.card-team__gallery img {
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  top: 0;
+}
+
+.card-team__body {
+  margin-top: 20px;
+}
+
+.card-team__title {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
+}
+
+.card-team__status {
+  font-size: 16px;
+  color: var(--bombay);
+  margin-top: 10px;
+}
+
+@media (max-width: 1365px) {
+  .card-team__gallery {
+    height: auto !important;
+    aspect-ratio: 1/1.2;
+  }
+
+  .card-team__gallery img {
+    height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-team__body {
+    margin-top: 10px;
+  }
+
+  .card-team__title {
+    font-size: 18px;
+  }
+
+  .card-team__status {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+}
+
+@media (any-hover: hover) {
+  .card-team:hover .card-team__gallery {
+    height: 500px;
+  }
+}
+
+@media (hover: none) {
+  .card-team:active .card-team__gallery {
+    height: 500px;
+  }
+}

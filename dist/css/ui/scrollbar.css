@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+._scrollbar::-webkit-scrollbar {
+  width: 4px;
+  /* Ширина всего элемента навигации */
+}
+
+._scrollbar::-webkit-scrollbar-track {
+  background: var(--athens);
+  /* Цвет дорожки */
+}
+
+._scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--bombay);
+  /* Цвет бегунка */
+  border-radius: 10px;
+  /* Округление бегунка */
+}
