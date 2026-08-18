@@ -20,6 +20,7 @@
     background-color: white;
     padding: 40px;
     margin: 0 auto;
+    overflow: hidden;
 
     @include laptop-min {
       padding: 25px;
@@ -36,6 +37,18 @@
     flex-wrap: wrap;
     gap: 5px;
     margin-bottom: 20px;
+    @include tablet {
+      margin: 0 -20px 20px -20px;
+      padding: 0 20px;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+    }
   }
   &__form {
     .form-grid {
