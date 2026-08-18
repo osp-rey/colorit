@@ -13,6 +13,7 @@ import mediaAdaptive from "./functions/mediaAdaptive.js";
 import productAvailability from "./functions/productAvailability.js";
 import handlerSelect from "./functions/select.js";
 import shopsMaps from "./functions/shopsMaps.js";
+import sidebarAccount from "./functions/sidebarAccount.js";
 import sliders from "./functions/sliders.js";
 import spoller from "./functions/spollers.js";
 import tabs from "./functions/tabs.js";
@@ -40,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   counter();
   inputPlaceholders();
   toggleBonuseCheckout();
+  sidebarAccount();
 
   Fancybox.bind("[data-fancybox]", {
     closeButton: false,

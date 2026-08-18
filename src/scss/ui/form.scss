@@ -209,3 +209,17 @@ textarea.input {
     margin: 10px 0px 0px 0px;
   }
 }
+
+.form-notification {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  margin-top: 25px;
+  color: var(--bombay);
+
+  i {
+    font-size: 20px;
+    flex-shrink: 0;
+    color: #5b5b5b;
+  }
+}

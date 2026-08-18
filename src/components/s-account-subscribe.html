@@ -8,7 +8,7 @@
             <span>Интернет-магазин Колорит</span>
           </a>
         </div>
-        <h2 class="s-title">Личные данные</h2>
+        <h2 class="s-title">Мои подписки</h2>
       </div>
     </div>
     <div class="s-account__btn-menu btn-m _outline" id="sidebar-account-open">
@@ -16,7 +16,10 @@
       Меню
     </div>
     <div class="s-account__wrap">
-      <div class="s-account__sidebar-overlay" id="sidebar-account-overlay"></div>
+      <div
+        class="s-account__sidebar-overlay"
+        id="sidebar-account-overlay"
+      ></div>
       <div class="s-account__sidebar" id="sidebar-account">
         <div class="s-account__sidebar-close" id="sidebar-account-close">
           <i class="icon-close"></i>
@@ -55,40 +58,39 @@
       <div class="s-account__main">
         <form class="s-account__form-wrap">
           <div class="s-account__form-block">
-            <div class="s-account__form-block-title">Данные</div>
+            <div class="s-account__form-block-title">Рубрики</div>
             <div class="s-account__form-block-grid">
-              <div class="form-control">
-                <div class="input-name">Имя</div>
-                <input type="text" class="input">
-              </div>
-              <div class="form-control">
-                <div class="input-name">Телефон</div>
-                <input type="tel" class="input">
-              </div>
-              <div class="form-control">
-                <div class="input-name">Email</div>
-                <input type="email" class="input">
-              </div>
-              <div class="form-control">
-                <div class="input-name">Город</div>
-                <input type="text" class="input">
+              <div class="form-control _full">
+                <div class="s-account__form-checks">
+                  <label class="check-item">
+                    <input type="checkbox" checked />
+                    <span>Новости магазина</span>
+                  </label>
+                  <label class="check-item">
+                    <input type="checkbox" />
+                    <span>Акции, скидки</span>
+                  </label>
+                </div>
               </div>
             </div>
           </div>
           <div class="s-account__form-block">
-            <div class="s-account__form-block-title">Безопасность</div>
             <div class="s-account__form-block-grid">
               <div class="form-control">
-                <div class="input-name">Новый пароль</div>
-                <input type="password" class="input">
-              </div>
-              <div class="form-control">
-                <div class="input-name">Подтверждение пароля</div>
-                <input type="password" class="input">
+                <div class="input-name">Email</div>
+                <input type="email" class="input" />
+                <div class="form-notification">
+                  <i class="icon-notification"></i>
+                  <div class="form-notification__text">
+                    Если Вы уже подписаны на нашу рассылку и хотите изменить ее
+                    настройки (например, отписаться), введите e-mail, на который
+                    вы получаете наши письма.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <button class="btn-s s-account__form-submit">Сохранить изменения</button>
+          <button type="submit" class="btn-s s-account__form-submit">Сохранить изменения</button>
         </form>
       </div>
     </div>
