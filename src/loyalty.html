@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    @@include("components/head.html")
+  </head>
+  <body class="body">
+    @@include("components/header.html") @@include("components/modals.html")
+    @@include("components/burger.html")
+
+    <main>
+      @@include("components/s-bann-loyalty.html")
+      <section class="sect-m s-steps">
+        <div class="container">
+          <div class="sect-wrap _catskill">
+            <div class="sect-head">
+              <h2 class="s-title">Как это работает?</h2>
+            </div>
+            <div class="s-steps__wrapper _nowrap">
+              <div class="s-steps__item _big">
+                <div class="item-tag">Шаг 1</div>
+                <div class="item-desk">
+                  <div class="item-wrap">
+                    <div class="item-info">
+                      <h3 class="item-title">
+                        Отсканируйте QR-код, чтобы присоединиться к бонусной
+                        системе
+                      </h3>
+                      <p class="item-content">
+                        Пройдите процесс регистрации, зaполнив форму и добавьте
+                        карту “Колоритка” к себе в телефон
+                      </p>
+                    </div>
+                    <img src="@img/qr.jpg" alt="qr" class="item-img" />
+                  </div>
+                </div>
+                <div class="item-mob">
+                  <h3 class="item-title">
+                    Перейдите по ссылке, чтобы присоединиться к бонусной системе
+                  </h3>
+                  <p class="item-content">
+                    Пройдите процесс регистрации, заполнив форму и добавьте
+                    карту “Колоритка” к себе в телефон
+                  </p>
+                  <a href="#" class="btn-s item-btn">Присоединиться</a>
+                </div>
+              </div>
+              <div class="s-steps__item">
+                <div class="item-tag">Шаг 2</div>
+                <h3 class="item-title">Получите первые баллы</h3>
+                <p class="item-content">
+                  После регистрации мы начислим Вам первые баллы, которые Вы
+                  сразу сможете потратить на первую покупку в нашем магазине
+                </p>
+                <a href="#modal-feedback" class="btn-s item-btn">
+                  Выбрать товары
+                </a>
+              </div>
+              <div class="s-steps__item">
+                <div class="item-tag">Шаг 3</div>
+                <h3 class="item-title">
+                  Копите баллы и используйте их в наших магазинах
+                </h3>
+                <p class="item-content">
+                  После каждой покупки Вам автоматически начисляется кэшбек,
+                  которые Вы можете тратить на покупки в размере 40% от
+                  общей суммы чека
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sect-m s-benefit">
+        <div class="container">
+          <div class="sect-head">
+            <h2 class="s-title">Как копить баллы</h2>
+          </div>
+          <div class="s-benefit__wrap">
+            <div class="s-benefit__item">
+              <div class="item-circle">
+                <img src="@img/benefit-icon.svg" alt="icon" />
+              </div>
+              <div class="item-body">
+                <h3 class="item-title">Покупайте онлайн</h3>
+                <p class="item-content">
+                  За заказы через интернет-магазин приложение начисляется в два раза больше баллов
+                </p>
+              </div>
+            </div>
+            <div class="s-benefit__item">
+              <div class="item-circle">
+                <img src="@img/benefit-icon.svg" alt="icon" />
+              </div>
+              <div class="item-body">
+                <h3 class="item-title">Участвуйте в акциях</h3>
+                <p class="item-content">
+                  За заказы через интернет-магазин приложение начисляется в два раза больше баллов
+                </p>
+              </div>
+            </div>
+            <div class="s-benefit__item">
+              <div class="item-circle">
+                <img src="@img/benefit-icon.svg" alt="icon" />
+              </div>
+              <div class="item-body">
+                <h3 class="item-title">Получайте баллы за большую покупку</h3>
+                <p class="item-content">
+                  За заказы через интернет-магазин приложение начисляется в два раза больше баллов
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include("components/s-faq.html")
+      @@include("components/s-social.html")
+    </main>
+
+    @@include("components/footer.html")
+
+    <script src="./js/app.js?ver=@@versions.js"></script>
+  </body>
+</html>

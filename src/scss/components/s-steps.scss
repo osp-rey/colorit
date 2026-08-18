@@ -7,6 +7,12 @@
     flex-wrap: wrap;
     gap: 20px;
 
+    @media (min-width: 1200px) {
+      &._nowrap {
+        flex-wrap: nowrap;
+      }
+    }
+
     @include tablet {
       gap: 10px;
     }
@@ -19,6 +25,12 @@
     padding: 30px;
     background-color: white;
     flex: 1 1 calc(33% - 20px);
+
+    @media (min-width: 1200px) {
+      &._big {
+        flex-basis: 540px;
+      }
+    }
 
     @include laptop-min {
       flex-basis: calc(50% - 10px);
@@ -43,11 +55,37 @@
         margin-bottom: 10px;
       }
     }
+
+    .item-desk {
+      @include laptop-min {
+        display: none !important;
+      }
+    }
+    .item-mob {
+      @media (min-width: 1026px) {
+        display: none !important;
+      }
+    }
+    .item-wrap {
+      display: flex;
+      align-items: start;
+      gap: 20px;
+      @include laptop-min {
+        gap: 15px;
+        flex-direction: column;
+      }
+    }
+    .item-info {
+      flex: 1;
+    }
     .item-title {
       font-weight: 700;
       font-size: 20px;
       margin: 0px 0px 10px 0px;
 
+      @include laptop {
+        font-size: 18px;
+      }
       @include tablet {
         font-size: 16px;
         margin-bottom: 5px;
@@ -55,11 +93,27 @@
     }
     .item-content {
       margin: 0px 0px 20px 0px;
-      
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
     }
     .item-btn {
       width: 100%;
       margin-top: auto;
+    }
+    .item-img {
+      display: block;
+      width: 160px;
+      flex-shrink: 0;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 20px 0 rgba(27, 36, 45, 0.1);
+
+      @include laptop-min {
+        display: none;
+      }
     }
   }
 }
