@@ -1,0 +1,26 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.s-team {
+  @include laptop-min {
+    overflow: hidden;
+  }
+  &__slider {
+    @include tablet {
+      overflow: visible !important;
+    }
+    .swiper-slide {
+      box-sizing: border-box;
+      height: auto !important;
+
+      @include tablet {
+        width: 390px !important;
+        max-width: 100%;
+      }
+
+      .card-team {
+        height: 100%;
+      }
+    }
+  }
+}

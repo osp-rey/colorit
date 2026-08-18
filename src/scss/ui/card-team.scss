@@ -1,0 +1,66 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.card-team {
+  display: flex;
+  flex-direction: column;
+  @include hover {
+    .card-team__gallery {
+      height: 500px;
+    }
+  }
+
+  &__gallery {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: linear-gradient(180deg, #f4f7fa 0%, #e0e6ed 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    height: 400px;
+    transition: height 0.3s ease;
+
+    @include laptop {
+      height: auto !important;
+      aspect-ratio: 1/1.2;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      top: 0;
+      @include laptop {
+        height: 100%;
+      }
+    }
+  }
+  &__body {
+    margin-top: 20px;
+    @include tablet {
+      margin-top: 10px;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+  
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  &__status {
+    font-size: 16px;
+    color: var(--bombay);
+    margin-top: 10px;
+    @include tablet {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  }
+}

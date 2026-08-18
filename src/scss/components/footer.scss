@@ -2,9 +2,11 @@
 @use "../base/media" as *;
 
 .footer {
+  position: relative;
   padding: 40px 0px;
   color: white;
   background-color: var(--black);
+  z-index: 1;
   @include tablet {
     padding: 30px 0px;
   }

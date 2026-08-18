@@ -1,0 +1,96 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-adv {
+  &__wrap {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  &__decor {
+    position: absolute;
+    top: 60px;
+    right: 350px;
+    z-index: -1;
+
+    @include tablet {
+      top: 50%;
+      right: auto;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @include tablet-min {
+      width: 250px;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+
+    @include laptop-min {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet-min {
+      gap: 5px;
+    }
+  }
+  &__gallery {
+    border-radius: 12px;
+    overflow: hidden;
+
+    @include tablet-min {
+      min-height: 245px;
+      grid-column: 2 span;
+    }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    min-height: 250px;
+    @include laptop-middle {
+      padding: 25px;
+    }
+    @include tablet-min {
+      padding: 20px 15px;
+      min-height: 120px;
+    }
+
+    .item-num {
+      font-weight: 700;
+      font-size: 66px;
+      text-align: center;
+      color: var(--primary);
+
+      @include laptop-middle {
+        font-size: 50px;
+      }
+      @include tablet-min {
+        font-size: 32px;
+      }
+    }
+    .item-text {
+      font-size: 18px;
+      line-height: 120%;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 5px;
+
+      @include tablet-min {
+        font-size: 14px;
+      }
+    }
+  }
+}

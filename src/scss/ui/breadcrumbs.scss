@@ -22,6 +22,10 @@
       color: var(--black);
     }
   }
+
+  &._white {
+    color: white;
+  }
 }
 .breadcrumb-item {
   display: flex;

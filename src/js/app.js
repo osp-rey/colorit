@@ -19,6 +19,7 @@ import spoller from "./functions/spollers.js";
 import tabs from "./functions/tabs.js";
 import toggle from "./functions/toggle.js";
 import toggleBonuseCheckout from "./functions/toggleBonuseCheckout.js";
+import videoBg from "./functions/videoBg.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   fixedCatalog();
@@ -42,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   inputPlaceholders();
   toggleBonuseCheckout();
   sidebarAccount();
+  videoBg();
 
   Fancybox.bind("[data-fancybox]", {
     closeButton: false,
