@@ -1,0 +1,18 @@
+@use '../base/templates' as *;
+@use '../base/media' as *;
+
+.s-map {
+  &__wrap {
+    border-radius: 16px;
+    height: 550px;
+    overflow: hidden;
+    @include tablet {
+      height: 400px;
+    }
+
+    iframe {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}

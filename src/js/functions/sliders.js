@@ -577,4 +577,34 @@ export default function sliders() {
       },
     });
   }
+
+  const reminderSlider = document.querySelector(".s-reminder__slider");
+  if (reminderSlider) {
+    const swiper = new Swiper(reminderSlider, {
+      speed: 900,
+      spaceBetween: 15,
+      slidesPerView: 1,
+      navigation: {
+        prevEl: ".s-reminder .slider-arrow._prev",
+        nextEl: ".s-reminder .slider-arrow._next",
+      },
+      pagination: {
+        el: ".s-reminder .slider-pagination",
+        clickable: true,
+      },
+      // autoplay: {
+      //   delay: 7000,
+      // },
+      breakpoints: {
+        1200: {
+          spaceBetween: 20,
+          slidesPerView: 3,
+        },
+        768: {
+          spaceBetween: 15,
+          slidesPerView: 3,
+        },
+      },
+    });
+  }
 }
