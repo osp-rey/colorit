@@ -128,8 +128,22 @@
 
   &._date {
     padding-right: 40px;
-    background: url('@img/input-date.svg') right 15px center / 14px auto no-repeat;
+    background: url("@img/input-date.svg") right 15px center / 14px auto
+      no-repeat;
     background-color: var(--background) !important;
+  }
+  &._transparent {
+    --background: transparent;
+    --border: rgba(0, 0, 0, 0.1);
+    --color: black;
+    --background-a: transparent;
+    --border-a: black;
+    --color-a: black;
+  }
+
+  @include tablet {
+    min-height: 40px;
+    padding: 10px 15px;
   }
 }
 textarea.input {

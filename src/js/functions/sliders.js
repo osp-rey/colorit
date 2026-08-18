@@ -542,4 +542,39 @@ export default function sliders() {
       },
     });
   }
+
+  const clientsSlider = document.querySelector(".s-clients__slider");
+
+  if (clientsSlider) {
+    const swiper = new Swiper(clientsSlider, {
+      speed: 900,
+      spaceBetween: 10,
+      slidesPerView: "auto",
+      navigation: {
+        prevEl: ".s-clients .slider-arrow._prev",
+        nextEl: ".s-clients .slider-arrow._next",
+      },
+      pagination: {
+        el: ".s-clients .slider-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 7000,
+      },
+      breakpoints: {
+        1200: {
+          spaceBetween: 40,
+          slidesPerView: 3,
+        },
+        1026: {
+          spaceBetween: 20,
+          slidesPerView: 3,
+        },
+        768: {
+          spaceBetween: 20,
+          slidesPerView: 2,
+        },
+      },
+    });
+  }
 }

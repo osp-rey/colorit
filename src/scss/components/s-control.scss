@@ -1,0 +1,81 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-control {
+  &__wrap {
+    @include flex-between;
+    gap: 30px;
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
+    @include tablet {
+      gap: 20px;
+    }
+  }
+  &__info {
+    flex: 0 1 480px;
+    @include laptop-min {
+      flex: auto;
+      width: 100%;
+    }
+  }
+  &__title {
+  }
+  &__list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include laptop-min {
+      margin-top: 30px;
+    }
+    @include tablet {
+      gap: 5px;
+      margin-top: 20px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      background: rgba(221, 225, 230, 0.5);
+      border-radius: 50px;
+      width: fit-content;
+
+      font-weight: 500;
+      font-size: 18px;
+
+      @include tablet {
+        font-size: 16px;
+        padding: 10px 12px;
+      }
+      @include tablet {
+        font-size: 14px;
+      }
+
+      img {
+        display: block;
+        width: 14px;
+        flex-shrink: 0;
+      }
+    }
+  }
+  &__img {
+    display: block;
+    flex: 0 1 860px;
+
+    @include laptop-min {
+      max-width: 800px;
+      width: 100%;
+      flex: auto;
+      margin: 0 auto;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-faq {
+  &__grid {
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    row-gap: 10px;
+
+    @include laptop-middle {
+      gap: 20px;
+      row-gap: 10px;
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    @include tablet-min {
+      gap: 5px;
+    }
+  }
+  &__spoller {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--catskill);
+    background-color: var(--catskill);
+    overflow: hidden;
+  }
+  &__spoller-btn {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+    cursor: pointer;
+
+    padding: 20px 30px;
+    backdrop-filter: blur(10px);
+    background-color: var(--catskill);
+
+    user-select: none;
+    font-size: 20px;
+
+    @include laptop-min {
+      font-size: 18px;
+      padding: 15px;
+      font-weight: 600;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+
+    &._spoller-active {
+      .item-circle {
+        transform: rotate(180deg);
+      }
+    }
+
+    .item-circle {
+      @include flex-center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--geyser);
+      font-size: 8px;
+      flex-shrink: 0;
+
+      transition: transform .3s ease;
+
+      i {
+        transform: translateY(2px);
+      }
+    }
+  }
+  &__spoller-content {
+    background-color: white;
+    padding: 15px 30px 20px 30px;
+    @include laptop-min {
+      padding: 15px;
+    }
+  }
+}

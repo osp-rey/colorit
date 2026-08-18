@@ -1,0 +1,133 @@
+@use "../base/templates" as *;
+@use "../base/media" as *;
+
+.s-bann {
+  &__wrap {
+    @include flex-between;
+    padding: 0px 40px 40px 40px;
+    border-radius: 16px;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+
+    @include laptop-middle {
+      padding: 0px 20px 20px 20px;
+    }
+    @include laptop-min {
+      align-items: start;
+    }
+    @include laptop-min {
+      flex-direction: column;
+      padding-top: 20px;
+    }
+    @include tablet-min {
+      background: none !important;
+      padding: 10px;
+    }
+  }
+  &__wrap-mob-bg {
+    position: absolute;
+    inset: 0 0 315px 0;
+    border-radius: 16px;
+    z-index: -1;
+    @media (min-width: 577px) {
+      display: none !important;
+    }
+  }
+  &__info {
+    flex: 0 1 500px;
+
+    @include laptop-min {
+      flex: auto;
+    }
+  }
+  &__title {
+  }
+  &__content {
+    margin-top: 20px;
+    @include tablet {
+      margin-top: 10px;
+    }
+  }
+  &__list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    @include tablet-min {
+      gap: 5px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 10px 20px;
+      background: rgba(221, 225, 230, 0.5);
+      width: fit-content;
+      border-radius: 50px;
+
+      font-size: 18px;
+
+      @include laptop-min {
+        font-size: 16px;
+      }
+      @include tablet-min {
+        font-size: 14px;
+        padding: 10px 12px;
+      }
+
+      img {
+        display: block;
+        flex-shrink: 0;
+        width: 24px;
+      }
+    }
+  }
+  &__form-wrap {
+    border-radius: 20px;
+    padding: 40px;
+    background-color: white;
+    width: 510px;
+    margin-right: 60px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+    transform: translateY(40px);
+
+    @include laptop {
+      margin-right: 0;
+    }
+    @include laptop-min {
+      padding: 25px;
+      transform: translateY(0);
+      width: 100%;
+      padding: 40px 25px;
+    }
+    @include tablet {
+      border-radius: 12px;
+    }
+    @include tablet-min {
+      padding: 10px;
+    }
+  }
+  &__form-title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+    @include tablet-min {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    .check-item {
+      margin: 5px 0px;
+    }
+  }
+  &__form-submit {
+    width: 100%;
+  }
+}
