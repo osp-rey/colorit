@@ -68,9 +68,15 @@ export default function fixedCatalog() {
     }
 
     function changeHeight() {
-      const offsetTop =
+      const header = document.querySelector(".header");
+      let offsetTop =
         document.querySelector(".header-t").clientHeight +
-        document.querySelector(".header").clientHeight;
+        header.clientHeight;
+
+      if (header.classList.contains("_scroll")) {
+        offsetTop = header.clientHeight;
+      }
+        
       fixedCatalog.style.maxHeight = `${window.visualViewport.height - offsetTop}px`;
       fixedCatalog.style.top = `${offsetTop}px`;
     }

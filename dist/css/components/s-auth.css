@@ -12,6 +12,7 @@
 
 .s-auth__body {
   width: 600px;
+  max-width: 100%;
   border-radius: 20px;
   background-color: white;
   padding: 40px;
@@ -65,6 +66,20 @@
 @media (max-width: 1025px) {
   .s-auth__logo {
     margin-bottom: 30px;
+  }
+
+  .s-auth__body {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .s-auth__body {
+    padding: 20px;
+  }
+
+  .s-auth__form .form-grid .form-control {
+    grid-column: 2 span;
   }
 }
 

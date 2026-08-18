@@ -15,10 +15,18 @@
   }
   &__body {
     width: 600px;
+    max-width: 100%;
     border-radius: 20px;
     background-color: white;
     padding: 40px;
     margin: 0 auto;
+
+    @include laptop-min {
+      padding: 25px;
+    }
+    @include tablet {
+      padding: 20px;
+    }
   }
   &__title {
     margin-bottom: 20px;
@@ -38,6 +46,10 @@
 
       .form-control {
         &._full {
+          grid-column: 2 span;
+        }
+
+        @include tablet {
           grid-column: 2 span;
         }
       }

@@ -240,7 +240,11 @@
                 document.body.classList.remove("body-hidden");
             }
             function changeHeight() {
-                const offsetTop = document.querySelector(".header-t").clientHeight + document.querySelector(".header").clientHeight;
+                const header = document.querySelector(".header");
+                let offsetTop = document.querySelector(".header-t").clientHeight + header.clientHeight;
+                if (header.classList.contains("_scroll")) {
+                    offsetTop = header.clientHeight;
+                }
                 fixedCatalog.style.maxHeight = `${window.visualViewport.height - offsetTop}px`;
                 fixedCatalog.style.top = `${offsetTop}px`;
             }

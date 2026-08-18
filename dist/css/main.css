@@ -4090,6 +4090,7 @@ textarea.input {
 
 .s-auth__body {
   width: 600px;
+  max-width: 100%;
   border-radius: 20px;
   background-color: white;
   padding: 40px;
@@ -6229,6 +6230,10 @@ textarea.input {
     margin-bottom: 30px;
   }
 
+  .s-auth__body {
+    padding: 25px;
+  }
+
   .s-account {
     overflow: hidden;
   }
@@ -6811,6 +6816,14 @@ textarea.input {
   .s-order__checkout-choice .choice-item {
     flex: auto;
     width: 100%;
+  }
+
+  .s-auth__body {
+    padding: 20px;
+  }
+
+  .s-auth__form .form-grid .form-control {
+    grid-column: 2 span;
   }
 
   .s-account__history-nav {

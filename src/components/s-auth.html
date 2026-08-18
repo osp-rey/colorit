@@ -13,9 +13,9 @@
     <a href="/" class="s-auth__logo">
       <img src="@img/logo.svg" alt="logo" />
     </a>
-    <div class="s-auth__body">
+    <div class="tabs s-auth__body">
       <h1 class="s-title s-auth__title">Регистрация</h1>
-      <div class="s-auth__nav">
+      <div class="tabs-nav s-auth__nav">
         <a href="#" data-tab-btn="tab-0" class="btn-m _outline _active">
           Физическое лицо
         </a>
@@ -23,59 +23,118 @@
           Юридическое лицо
         </a>
       </div>
-      <form action="#" class="s-auth__form">
-        <div class="form-grid">
-          <div class="form-control _full">
-            <div class="input-name">Имя</div>
-            <input required type="text" class="input" />
-          </div>
-          <div class="form-control">
-            <div class="input-name">Email</div>
-            <input required type="email" class="input" />
-          </div>
-          <div class="form-control">
-            <div class="input-name">Номер телефона</div>
-            <input required type="tel" class="input" />
-          </div>
-          <div class="form-control">
-            <div class="input-name">Пароль</div>
-            <input required type="password" class="input" />
-          </div>
-          <div class="form-control">
-            <div class="input-name">Повторите пароль</div>
-            <input required type="password" class="input" />
-          </div>
-          <div class="s-auth__form-checks">
-            <label class="check-item">
-              <input type="checkbox" />
-              <span>
-                <span>
-                  Я согласен с условиями
-                  <a href="#" target="_blank">
-                    Политики конфеденциальности
-                  </a>
-                  и подтверждаю свое согласие на обработку компанией
-                  «Колорит» предоставленных мной персональных данных.
-                </span>
-              </span>
-            </label>
-            <label class="check-item">
-              <input type="checkbox" />
-              <span>
-                <span>
-                  Я не возражаю против получения на электронную почту
-                  информации о специальных предложениях.
-                </span>
-              </span>
-            </label>
-          </div>
+      <div class="tabs-content">
+        <div data-tab="tab-0" class="_active _show">
+          <form action="#" class="s-auth__form">
+            <div class="form-grid">
+              <div class="form-control _full">
+                <div class="input-name">Имя</div>
+                <input required type="text" class="input" />
+              </div>
+              <div class="form-control">
+                <div class="input-name">Email</div>
+                <input required type="email" class="input" />
+              </div>
+              <div class="form-control">
+                <div class="input-name">Номер телефона</div>
+                <input required type="tel" class="input" />
+              </div>
+              <div class="form-control">
+                <div class="input-name">Пароль</div>
+                <input required type="password" class="input" />
+              </div>
+              <div class="form-control">
+                <div class="input-name">Повторите пароль</div>
+                <input required type="password" class="input" />
+              </div>
+              <div class="s-auth__form-checks">
+                <label class="check-item">
+                  <input type="checkbox" />
+                  <span>
+                    <span>
+                      Я согласен с условиями
+                      <a href="#" target="_blank">
+                        Политики конфеденциальности
+                      </a>
+                      и подтверждаю свое согласие на обработку компанией
+                      «Колорит» предоставленных мной персональных данных.
+                    </span>
+                  </span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" />
+                  <span>
+                    <span>
+                      Я не возражаю против получения на электронную почту
+                      информации о специальных предложениях.
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn-s s-auth__form-submit">Зарегистрироваться</button>
+          </form>
+          <p class="s-auth__form-content">
+            Есть аккаунт? <br>
+            <a href="#modal-auth" data-fancybox>Авторизируйтесь</a> на сайте
+          </p>
         </div>
-        <button type="submit" class="btn-s s-auth__form-submit">Зарегистрироваться</button>
-      </form>
-      <p class="s-auth__form-content">
-        Есть аккаунт? <br>
-        <a href="#">Авторизируйтесь</a> на сайте
-      </p>
+        <div data-tab="tab-1">
+          <form action="#" class="s-auth__form">
+            <div class="form-grid">
+              <div class="form-control _full">
+                <div class="input-name">Имя</div>
+                <input required type="text" class="input" />
+              </div>
+              <div class="form-control">
+                <div class="input-name">Email</div>
+                <input required type="email" class="input" />
+              </div>
+              <div class="form-control">
+                <div class="input-name">Номер телефона</div>
+                <input required type="tel" class="input" />
+              </div>
+              <div class="form-control">
+                <div class="input-name">Пароль</div>
+                <input required type="password" class="input" />
+              </div>
+              <div class="form-control">
+                <div class="input-name">Повторите пароль</div>
+                <input required type="password" class="input" />
+              </div>
+              <div class="s-auth__form-checks">
+                <label class="check-item">
+                  <input type="checkbox" />
+                  <span>
+                    <span>
+                      Я согласен с условиями
+                      <a href="#" target="_blank">
+                        Политики конфеденциальности
+                      </a>
+                      и подтверждаю свое согласие на обработку компанией
+                      «Колорит» предоставленных мной персональных данных.
+                    </span>
+                  </span>
+                </label>
+                <label class="check-item">
+                  <input type="checkbox" />
+                  <span>
+                    <span>
+                      Я не возражаю против получения на электронную почту
+                      информации о специальных предложениях.
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn-s s-auth__form-submit">Зарегистрироваться</button>
+          </form>
+          <p class="s-auth__form-content">
+            Есть аккаунт? <br>
+            <a href="#modal-auth" data-fancybox>Авторизируйтесь</a> на сайте
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
