@@ -6534,7 +6534,7 @@ textarea.input {
 
   .card-product-r__price {
     gap: 5px;
-    margin-top: 5px;
+    padding-top: 5px;
   }
 
   .card-product-r__price .item-price {
