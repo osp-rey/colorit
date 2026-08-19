@@ -51,6 +51,12 @@
   z-index: -1;
 }
 
+@media (min-width: 1366px) {
+  .s-connect {
+    margin-top: 80px;
+  }
+}
+
 @media (max-width: 1365px) {
   .s-connect__img {
     width: 450px;

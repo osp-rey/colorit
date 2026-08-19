@@ -636,6 +636,7 @@
   .s-product__sidebar {
     flex: auto;
     width: 100%;
+    margin-top: 20px;
   }
 
   .s-product__sidebar-body .s-title {

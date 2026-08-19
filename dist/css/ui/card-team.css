@@ -66,15 +66,3 @@
     margin-top: 5px;
   }
 }
-
-@media (any-hover: hover) {
-  .card-team:hover .card-team__gallery {
-    height: 500px;
-  }
-}
-
-@media (hover: none) {
-  .card-team:active .card-team__gallery {
-    height: 500px;
-  }
-}

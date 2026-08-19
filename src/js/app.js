@@ -11,6 +11,7 @@ import inputmask from "./functions/inputmask.js";
 import inputPlaceholders from "./functions/inputPlaceholders.js";
 import mediaAdaptive from "./functions/mediaAdaptive.js";
 import productAvailability from "./functions/productAvailability.js";
+import reviewsInit from "./functions/reviewsInit.js";
 import handlerSelect from "./functions/select.js";
 import shopsMaps from "./functions/shopsMaps.js";
 import sidebarAccount from "./functions/sidebarAccount.js";
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleBonuseCheckout();
   sidebarAccount();
   videoBg();
+  reviewsInit();
 
   Fancybox.bind("[data-fancybox]", {
     closeButton: false,

@@ -4790,15 +4790,16 @@ textarea.input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 40px 40px 40px;
+  padding: 0px 40px;
   border-radius: 16px;
   gap: 30px;
   position: relative;
   z-index: 1;
 }
 
-.s-bann__wrap._top {
+.s-bann__wrap._offset {
   padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .s-bann__wrap-mob-bg {
@@ -4892,6 +4893,7 @@ textarea.input {
   flex-wrap: wrap;
   gap: 40px;
   background-color: var(--geyser);
+  margin-top: 40px;
   padding: 40px;
   border-radius: 16px;
 }
@@ -5577,6 +5579,12 @@ textarea.input {
   }
 }
 
+@media (min-width: 1366px) {
+  .s-connect {
+    margin-top: 80px;
+  }
+}
+
 @media (max-width: 1539px) {
   .slider-wrapper .slider-arrow._prev {
     left: 10px;
@@ -5864,6 +5872,7 @@ textarea.input {
 
   .s-bann__wrap._top {
     padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .s-bann__adv-item .item-title {
@@ -6145,6 +6154,7 @@ textarea.input {
   .s-product__sidebar {
     flex: auto;
     width: 100%;
+    margin-top: 20px;
   }
 
   .s-product__sidebar-body .s-title {
@@ -6337,6 +6347,7 @@ textarea.input {
     padding: 30px 20px;
     gap: 30px;
     row-gap: 15px;
+    margin-top: 20px;
   }
 
   .s-bann__adv-grid {
@@ -7646,10 +7657,6 @@ textarea.input {
     color: var(--primary);
   }
 
-  .card-team:hover .card-team__gallery {
-    height: 500px;
-  }
-
   .header-t__location:hover {
     opacity: 0.7;
   }
@@ -7989,10 +7996,6 @@ textarea.input {
 
   .card-history-product__title:active {
     color: var(--primary);
-  }
-
-  .card-team:active .card-team__gallery {
-    height: 500px;
   }
 
   .header-t__location:active {

@@ -4,11 +4,11 @@
 .card-team {
   display: flex;
   flex-direction: column;
-  @include hover {
-    .card-team__gallery {
-      height: 500px;
-    }
-  }
+  // @include hover {
+  //   .card-team__gallery {
+  //     height: 500px;
+  //   }
+  // }
 
   &__gallery {
     position: relative;
