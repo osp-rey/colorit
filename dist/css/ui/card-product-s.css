@@ -100,6 +100,24 @@
   transition: opacity 0.3s ease, background-color 0.3s ease;
 }
 
+@media (max-width: 1025px) {
+  .card-product-s__cart-btn {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-product-s__gallery {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .card-product-s {
+    padding: 10px;
+  }
+}
+
 @media (any-hover: hover) {
   .card-product-s:hover .card-product-s__cart-btn {
     opacity: 1;

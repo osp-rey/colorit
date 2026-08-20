@@ -119,7 +119,7 @@ export default function sliders() {
       const swiper = new Swiper(slider, {
         speed: 900,
         slidesPerView: "auto",
-        spaceBetween: 10,
+        spaceBetween: 5,
         autoplay: {
           delay: 6500,
         },

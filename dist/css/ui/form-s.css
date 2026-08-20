@@ -108,6 +108,10 @@
     height: 32px;
     font-size: 14px;
   }
+
+  .form-s__body {
+    min-width: auto;
+  }
 }
 
 @media (any-hover: hover) {

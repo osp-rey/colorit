@@ -8,6 +8,9 @@
   padding: 10px 20px;
   border-top: 1px solid var(--athens);
 
+  @include tablet-min {
+    padding: 10px;
+  }
   @include hover {
     .card-product-s__cart-btn {
       opacity: 1;
@@ -19,6 +22,10 @@
     width: 60px;
     height: 60px;
     flex-shrink: 0;
+
+    @include tablet {
+      display: none;
+    }
 
     img {
       display: block;
@@ -99,6 +106,10 @@
     transition:
       opacity 0.3s ease,
       background-color 0.3s ease;
+
+    @include laptop-min {
+      opacity: 1;
+    }
     @include hover {
       background-color: var(--primary-h);
     }

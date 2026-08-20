@@ -80,6 +80,10 @@
       opacity 0.4s ease,
       visibility 0.4s ease,
       transform 0.4s ease;
+
+    @include tablet {
+      min-width: auto;
+    }
   }
   &__body-container {
     padding: 0 20px;

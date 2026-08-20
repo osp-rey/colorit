@@ -17,7 +17,7 @@
     }
   }
   @include tablet-min {
-    padding: 10px;
+    padding: 8px;
   }
 
   &__gallery {
@@ -57,7 +57,7 @@
   &__body {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    // flex: 1;
     margin-top: 10px;
   }
   &__id {
@@ -70,11 +70,13 @@
     line-height: 140%;
     transition: color 0.3s ease;
     margin-top: 5px;
+    min-height: 60px;
     @include hover {
       color: var(--primary);
     }
     @include tablet-min {
       font-size: 12px;
+      min-height: 50px;
     }
   }
   &__location-btn {
@@ -109,7 +111,8 @@
     width: 100%;
     @include tablet-min {
       padding-top: 5px;
-      flex-wrap: wrap;
+      flex: 1;
+      flex-direction: column;
       flex-wrap: wrap;
       gap: 10px;
     }
@@ -119,6 +122,9 @@
     gap: 12px;
     @include laptop-middle {
       gap: 8px;
+    }
+    @include tablet {
+      align-items: center;
     }
     @include tablet-min {
       gap: 5px;
@@ -137,11 +143,23 @@
         font-size: 16px;
       }
       @include tablet {
-        font-size: 18px;
+        font-weight: 600;
+        font-size: 16px;
+
+        &._fill {
+          padding: 4px;
+          border-radius: 4px;
+          background-color: var(--catskill);
+        }
       }
 
       strong {
         font-weight: 600;
+      }
+    }
+    .item-price-val {
+      &._neighbour {
+        color: #8290a1;
       }
     }
     .item-price-old {
@@ -151,16 +169,24 @@
       @include desktop {
         font-size: 16px;
       }
+      @include tablet {
+        font-size: 14px;
+        font-weight: 400;
+      }
     }
     .item-text {
       font-size: 12px;
       color: var(--bombay);
       margin-top: 2px;
       @include laptop-middle {
-        font-size: 10px
+        font-size: 10px;
       }
       @include laptop-min {
         font-size: 12px;
+      }
+      @include tablet {
+        font-weight: 400;
+        font-size: 10px;
       }
     }
   }

@@ -121,6 +121,29 @@
   font-size: 11px;
 }
 
+.header__contacts {
+  display: flex;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.header__buttons-circle {
+  display: flex;
+  gap: 10px;
+}
+
+.header__btn-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--geyser);
+  border-radius: 50%;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
 .header__buttons-menu {
   display: flex;
   gap: 15px;
@@ -130,6 +153,11 @@
   padding-top: 8px;
   padding-bottom: 8px;
   min-height: 48px;
+}
+
+.header__buttons-menu .btn-p .rect {
+  width: 17px;
+  height: 17px;
 }
 
 .header__buttons-menu .btn-p .item-info-num {
@@ -221,9 +249,20 @@
   transition: color 0.3s ease;
 }
 
+.header-m {
+  padding-bottom: 10px;
+  background-color: white;
+}
+
+@media (min-width: 1025px) {
+  .header-m {
+    display: none;
+  }
+}
+
 @media (min-width: 1026px) {
-  .header__buttons-menu .btn-p._lap {
-    display: none !important;
+  .header__buttons-circle {
+    display: none;
   }
 
   .header__burger-btn {
@@ -264,8 +303,8 @@
     display: none;
   }
 
-  .header__form-s {
-    display: none;
+  .header__contacts {
+    gap: 10px;
   }
 
   .header__social {
@@ -279,31 +318,11 @@
 
   .header__buttons-menu .btn-p {
     min-height: auto;
-    width: 40px;
-    height: 40px;
-    padding: 0;
+    padding: 6px 12px;
   }
 
-  .header__buttons-menu .btn-p span,
-  .header__buttons-menu .btn-p .item-info {
-    display: none;
-  }
-
-  .header__buttons-menu .btn-p .rect {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  .header__buttons-menu .btn-p .rect i {
-    font-size: 17px;
-  }
-
-  .header__buttons-menu .btn-p .rect .num {
-    top: 3px;
-    right: 3px;
+  .header__buttons-menu .btn-p .item-info-num {
+    font-size: 15px;
   }
 
   .header-nav {
@@ -312,8 +331,16 @@
 }
 
 @media (max-width: 767px) {
+  .header__wrap {
+    flex-wrap: wrap;
+  }
+
   .header__logo {
     width: 95px;
+  }
+
+  .header__contacts {
+    width: 100%;
   }
 }
 
@@ -332,6 +359,10 @@
 
   .header__catalog-btn:hover {
     background-color: var(--primary-h);
+  }
+
+  .header__btn-circle:hover {
+    border-color: var(--primary);
   }
 
   .header__burger-btn:hover {
@@ -358,6 +389,10 @@
 
   .header__catalog-btn:active {
     background-color: var(--primary-h);
+  }
+
+  .header__btn-circle:active {
+    border-color: var(--primary);
   }
 
   .header__burger-btn:active {

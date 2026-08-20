@@ -1333,7 +1333,6 @@ input[type=number] {
 .card-product__body {
   display: flex;
   flex-direction: column;
-  flex: 1;
   margin-top: 10px;
 }
 
@@ -1352,6 +1351,7 @@ input[type=number] {
   line-height: 140%;
   transition: color 0.3s ease;
   margin-top: 5px;
+  min-height: 60px;
 }
 
 .card-product__location-btn {
@@ -1392,6 +1392,10 @@ input[type=number] {
 
 .card-product__price .item-price strong {
   font-weight: 600;
+}
+
+.card-product__price .item-price-val._neighbour {
+  color: #8290a1;
 }
 
 .card-product__price .item-price-old {
@@ -2292,6 +2296,29 @@ textarea.input {
   font-size: 11px;
 }
 
+.header__contacts {
+  display: flex;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.header__buttons-circle {
+  display: flex;
+  gap: 10px;
+}
+
+.header__btn-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--geyser);
+  border-radius: 50%;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
 .header__buttons-menu {
   display: flex;
   gap: 15px;
@@ -2301,6 +2328,11 @@ textarea.input {
   padding-top: 8px;
   padding-bottom: 8px;
   min-height: 48px;
+}
+
+.header__buttons-menu .btn-p .rect {
+  width: 17px;
+  height: 17px;
 }
 
 .header__buttons-menu .btn-p .item-info-num {
@@ -2390,6 +2422,11 @@ textarea.input {
   width: fit-content;
   font-size: 18px;
   transition: color 0.3s ease;
+}
+
+.header-m {
+  padding-bottom: 10px;
+  background-color: white;
 }
 
 .burger-overlay {
@@ -5482,13 +5519,19 @@ textarea.input {
   }
 }
 
+@media (min-width: 1025px) {
+  .header-m {
+    display: none;
+  }
+}
+
 @media (min-width: 1026px) {
   .slider-pagination._lap {
     display: none !important;
   }
 
-  .header__buttons-menu .btn-p._lap {
-    display: none !important;
+  .header__buttons-circle {
+    display: none;
   }
 
   .header__burger-btn {
@@ -5890,6 +5933,10 @@ textarea.input {
 }
 
 @media (max-width: 1025px) {
+  .card-product-s__cart-btn {
+    opacity: 1;
+  }
+
   .sect-wrap {
     overflow: hidden;
   }
@@ -5930,8 +5977,8 @@ textarea.input {
     display: none;
   }
 
-  .header__form-s {
-    display: none;
+  .header__contacts {
+    gap: 10px;
   }
 
   .header__social {
@@ -5945,31 +5992,11 @@ textarea.input {
 
   .header__buttons-menu .btn-p {
     min-height: auto;
-    width: 40px;
-    height: 40px;
-    padding: 0;
+    padding: 6px 12px;
   }
 
-  .header__buttons-menu .btn-p span,
-  .header__buttons-menu .btn-p .item-info {
-    display: none;
-  }
-
-  .header__buttons-menu .btn-p .rect {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-  }
-
-  .header__buttons-menu .btn-p .rect i {
-    font-size: 17px;
-  }
-
-  .header__buttons-menu .btn-p .rect .num {
-    top: 3px;
-    right: 3px;
+  .header__buttons-menu .btn-p .item-info-num {
+    font-size: 15px;
   }
 
   .header-nav {
@@ -6464,6 +6491,10 @@ textarea.input {
     font-size: 14px;
   }
 
+  .form-s__body {
+    min-width: auto;
+  }
+
   .social {
     gap: 10px;
   }
@@ -6484,6 +6515,10 @@ textarea.input {
 
   .slider-pagination {
     margin-top: 10px;
+  }
+
+  .card-product-s__gallery {
+    display: none;
   }
 
   .sect-m {
@@ -6545,8 +6580,29 @@ textarea.input {
     font-size: 16px;
   }
 
+  .card-product__price {
+    align-items: center;
+  }
+
   .card-product__price .item-price {
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .card-product__price .item-price._fill {
+    padding: 4px;
+    border-radius: 4px;
+    background-color: var(--catskill);
+  }
+
+  .card-product__price .item-price-old {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .card-product__price .item-text {
+    font-weight: 400;
+    font-size: 10px;
   }
 
   .tooltip-a {
@@ -6611,8 +6667,16 @@ textarea.input {
     margin-top: 5px;
   }
 
+  .header__wrap {
+    flex-wrap: wrap;
+  }
+
   .header__logo {
     width: 95px;
+  }
+
+  .header__contacts {
+    width: 100%;
   }
 
   .modal._shops .modal__container {
@@ -7161,6 +7225,10 @@ textarea.input {
     font-size: 14px;
   }
 
+  .card-product-s {
+    padding: 10px;
+  }
+
   .sect-wrap {
     padding: 30px 10px;
   }
@@ -7180,7 +7248,7 @@ textarea.input {
   }
 
   .card-product {
-    padding: 10px;
+    padding: 8px;
   }
 
   .card-product__gallery .item-discount {
@@ -7190,6 +7258,7 @@ textarea.input {
 
   .card-product__title {
     font-size: 12px;
+    min-height: 50px;
   }
 
   .card-product__location-btn {
@@ -7202,7 +7271,8 @@ textarea.input {
 
   .card-product__bottom {
     padding-top: 5px;
-    flex-wrap: wrap;
+    flex: 1;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
   }
@@ -7673,6 +7743,10 @@ textarea.input {
     background-color: var(--primary-h);
   }
 
+  .header__btn-circle:hover {
+    border-color: var(--primary);
+  }
+
   .header__burger-btn:hover {
     background-color: var(--primary-h);
   }
@@ -8012,6 +8086,10 @@ textarea.input {
 
   .header__catalog-btn:active {
     background-color: var(--primary-h);
+  }
+
+  .header__btn-circle:active {
+    border-color: var(--primary);
   }
 
   .header__burger-btn:active {
