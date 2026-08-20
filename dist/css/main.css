@@ -2427,6 +2427,7 @@ textarea.input {
 .header-m {
   padding-bottom: 10px;
   background-color: white;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
 }
 
 .burger-overlay {
