@@ -131,7 +131,7 @@
     }
     .item-price {
       font-weight: 300;
-      font-size: 20px;
+      font-size: 19px;
 
       @include desktop {
         font-size: 17px;
@@ -145,14 +145,13 @@
       @include tablet {
         font-weight: 600;
         font-size: 16px;
-
-        &._fill {
-          padding: 4px;
-          border-radius: 4px;
-          background-color: var(--catskill);
-        }
       }
-
+      
+      &._fill {
+        padding: 4px;
+        border-radius: 4px;
+        background-color: var(--catskill);
+      }
       strong {
         font-weight: 600;
       }

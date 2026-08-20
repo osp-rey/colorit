@@ -95,7 +95,13 @@
 
 .card-product__price .item-price {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 19px;
+}
+
+.card-product__price .item-price._fill {
+  padding: 4px;
+  border-radius: 4px;
+  background-color: var(--catskill);
 }
 
 .card-product__price .item-price strong {
@@ -192,12 +198,6 @@
   .card-product__price .item-price {
     font-weight: 600;
     font-size: 16px;
-  }
-
-  .card-product__price .item-price._fill {
-    padding: 4px;
-    border-radius: 4px;
-    background-color: var(--catskill);
   }
 
   .card-product__price .item-price-old {
