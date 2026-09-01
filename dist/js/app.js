@@ -1,5 +1,17 @@
 (() => {
     "use strict";
+    function accDrop() {
+        const btn = document.querySelector("#btn-acc-drop");
+        if (btn) {
+            document.body.addEventListener("click", () => {
+                btn.classList.remove("_open");
+            });
+            btn.addEventListener("click", e => {
+                e.stopPropagation();
+                btn.classList.toggle("_open");
+            });
+        }
+    }
     function anchors_anchors() {
         const containers = document.querySelectorAll(".anchors");
         if (containers.length) {
@@ -872,9 +884,6 @@
                     speed: 900,
                     slidesPerView: "auto",
                     spaceBetween: 5,
-                    autoplay: {
-                        delay: 6500
-                    },
                     navigation: {
                         prevEl: sliderWrap.querySelector(".slider-arrow._prev"),
                         nextEl: sliderWrap.querySelector(".slider-arrow._next")
@@ -1668,6 +1677,7 @@
         sidebarAccount();
         videoBg();
         reviewsInit();
+        accDrop();
         Fancybox.bind("[data-fancybox]", {
             closeButton: false,
             on: {

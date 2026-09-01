@@ -1373,6 +1373,7 @@ input[type=number] {
 
 .card-product__bottom {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding-top: 10px;
   margin-top: auto;
@@ -1382,7 +1383,13 @@ input[type=number] {
 
 .card-product__price {
   display: flex;
-  gap: 12px;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-product__price .item-current-price {
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .card-product__price .item-price {
@@ -1416,6 +1423,31 @@ input[type=number] {
   margin-top: 2px;
 }
 
+.card-product__bottom-buttons {
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  flex: 1;
+}
+
+.card-product__favourite-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--geyser);
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
+}
+
+.card-product__favourite-btn._active {
+  background-color: var(--geyser);
+}
+
 .card-product__cart-btn {
   display: flex;
   align-items: center;
@@ -1423,13 +1455,15 @@ input[type=number] {
   cursor: pointer;
   flex-shrink: 0;
   border-radius: 50%;
-  width: 46px;
   height: 46px;
   background-color: var(--primary);
-  opacity: 0;
+  overflow: hidden;
+  width: 100%;
+  flex-shrink: 0;
+  max-width: 0px;
   color: white;
   font-size: 20px;
-  transition: background-color 0.3s ease, opacity 0.3s ease;
+  transition: background-color 0.3s ease, opacity 0.3s ease, margin-left 0.3s ease, max-width 0.3s ease;
 }
 
 .products-slider .swiper-slide {
@@ -2331,9 +2365,20 @@ textarea.input {
 }
 
 .header__buttons-menu .btn-p {
+  position: relative;
   padding-top: 8px;
   padding-bottom: 8px;
   min-height: 48px;
+}
+
+.header__buttons-menu .btn-p._account._open {
+  background-color: var(--geyser) !important;
+  border-color: var(--geyser) !important;
+}
+
+.header__buttons-menu .btn-p._account._open .header__acc-drop {
+  opacity: 1;
+  visibility: visible;
 }
 
 .header__buttons-menu .btn-p._circle {
@@ -2342,8 +2387,8 @@ textarea.input {
   padding: 0 !important;
   border-radius: 50%;
   min-height: auto !important;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
 }
 
 .header__buttons-menu .btn-p._circle span {
@@ -2386,6 +2431,98 @@ textarea.input {
   color: white;
   font-size: 11px;
   transition: background-color 0.3s ease;
+}
+
+.header__acc-drop {
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 12px;
+  color: var(--black);
+  z-index: 30;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.header__acc-drop .drop-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 10px 20px;
+  border-bottom: 1px solid var(--geyser);
+  text-align: center;
+}
+
+.header__acc-drop .drop-title {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 120%;
+}
+
+.header__acc-drop .drop-mail {
+  font-size: 15px;
+  line-height: 120%;
+  color: var(--bombay);
+  transition: color 0.3s ease;
+}
+
+.header__acc-drop .drop-list {
+  border-bottom: 1px solid var(--geyser);
+}
+
+.header__acc-drop .drop-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.header__acc-drop .drop-list a .rect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.header__acc-drop .drop-list a i {
+  font-size: 16px;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.header__acc-drop .drop-exit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  font-size: 14px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.header__acc-drop .drop-exit .rect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.header__acc-drop .drop-exit i {
+  font-size: 16px;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
 }
 
 .header-nav {
@@ -5741,7 +5878,7 @@ textarea.input {
   }
 
   .card-product__price {
-    gap: 8px;
+    gap: 10px;
   }
 
   .card-product__price .item-price {
@@ -5753,7 +5890,6 @@ textarea.input {
   }
 
   .card-product__cart-btn {
-    width: 38px;
     height: 38px;
     font-size: 18px;
   }
@@ -5956,6 +6092,18 @@ textarea.input {
   }
 }
 
+@media (any-hover: hover) and (max-width: 1199px) {
+  .card-product:hover .card-product__cart-btn {
+    max-width: 38px;
+  }
+}
+
+@media (hover: none) and (max-width: 1199px) {
+  .card-product:active .card-product__cart-btn {
+    max-width: 38px;
+  }
+}
+
 @media (max-width: 1025px) {
   .card-product-s__cart-btn {
     opacity: 1;
@@ -5973,8 +6121,15 @@ textarea.input {
     font-size: 12px;
   }
 
+  .card-product__favourite-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
   .card-product__cart-btn {
-    opacity: 1 !important;
+    margin-left: 8px !important;
+    max-width: 38px !important;
   }
 
   .cats-slider {
@@ -6019,6 +6174,11 @@ textarea.input {
     min-height: 0;
     height: auto;
     padding: 6px 12px;
+  }
+
+  .header__buttons-menu .btn-p._circle {
+    width: 40px;
+    height: 40px;
   }
 
   .header__buttons-menu .btn-p._circle-mob {
@@ -6620,8 +6780,8 @@ textarea.input {
     font-size: 16px;
   }
 
-  .card-product__price {
-    align-items: center;
+  .card-product__price .item-current-price {
+    font-size: 18px;
   }
 
   .card-product__price .item-price {
@@ -7305,23 +7465,24 @@ textarea.input {
 
   .card-product__bottom {
     padding-top: 5px;
-    flex: 1;
-    flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
   }
 
-  .card-product__price {
-    gap: 5px;
+  .card-product__favourite-btn {
+    order: 2;
   }
 
   .card-product__cart-btn {
-    width: 100%;
+    max-width: none !important;
+    flex: 1;
     border-radius: 50px;
     padding: 10px;
     height: auto;
     text-align: center;
     font-size: 14px;
+    margin: 0px 5px 0px 0px !important;
+    order: 1;
   }
 
   .card-product__cart-btn i {
@@ -7697,11 +7858,16 @@ textarea.input {
   }
 
   .card-product:hover .card-product__cart-btn {
-    opacity: 1;
+    margin-left: 8px;
+    max-width: 48px;
   }
 
   .card-product__title:hover {
     color: var(--primary);
+  }
+
+  .card-product__favourite-btn:hover {
+    background-color: var(--geyser);
   }
 
   .card-product__cart-btn:hover {
@@ -7783,6 +7949,28 @@ textarea.input {
 
   .header__burger-btn:hover {
     background-color: var(--primary-h);
+  }
+
+  .header__acc-drop .drop-mail:hover {
+    color: var(--primary);
+  }
+
+  .header__acc-drop .drop-list a:hover {
+    background-color: rgba(221, 15, 18, 0.07);
+    color: var(--primary);
+  }
+
+  .header__acc-drop .drop-list a:hover i {
+    color: var(--primary);
+  }
+
+  .header__acc-drop .drop-exit:hover {
+    background-color: rgba(221, 15, 18, 0.07);
+    color: var(--primary);
+  }
+
+  .header__acc-drop .drop-exit:hover i {
+    color: var(--primary);
   }
 
   .header-nav__slide:hover {
@@ -8042,11 +8230,16 @@ textarea.input {
   }
 
   .card-product:active .card-product__cart-btn {
-    opacity: 1;
+    margin-left: 8px;
+    max-width: 48px;
   }
 
   .card-product__title:active {
     color: var(--primary);
+  }
+
+  .card-product__favourite-btn:active {
+    background-color: var(--geyser);
   }
 
   .card-product__cart-btn:active {
@@ -8128,6 +8321,28 @@ textarea.input {
 
   .header__burger-btn:active {
     background-color: var(--primary-h);
+  }
+
+  .header__acc-drop .drop-mail:active {
+    color: var(--primary);
+  }
+
+  .header__acc-drop .drop-list a:active {
+    background-color: rgba(221, 15, 18, 0.07);
+    color: var(--primary);
+  }
+
+  .header__acc-drop .drop-list a:active i {
+    color: var(--primary);
+  }
+
+  .header__acc-drop .drop-exit:active {
+    background-color: rgba(221, 15, 18, 0.07);
+    color: var(--primary);
+  }
+
+  .header__acc-drop .drop-exit:active i {
+    color: var(--primary);
   }
 
   .header-nav__slide:active {

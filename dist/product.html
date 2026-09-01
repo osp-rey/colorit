@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="./files/icomoon/style.css" />
 <link rel="stylesheet" href="./files/swiper/swiper.min.css" />
 <link rel="stylesheet" href="./files/fancybox/fancybox.min.css" />
-<link rel="stylesheet" href="./css/main.css?ver=mtider19" />
+<link rel="stylesheet" href="./css/main.css?ver=mtiqhm2d" />
 <title>Колорит</title>
 
 </head>
@@ -192,7 +192,7 @@
           </a>
         </div>
         <div class="header__buttons-menu">
-          <a href="#" class="btn-p">
+          <div class="btn-p _account" id="btn-acc-drop">
             <div class="rect">
               <i class="icon-profile"></i>
             </div>
@@ -201,7 +201,43 @@
               <div class="item-info-num">1 514</div>
               <div class="item-info-text">Бонусов</div>
             </div>
-          </a>
+            <div class="header__acc-drop">
+              <div class="drop-head">
+                <div class="drop-title">Личный аккаунт</div>
+                <a href="mailto:mail@mail.ru" class="drop-mail">mail@mail.ru</a>
+              </div>
+              <ul class="list drop-list">
+                <li>
+                  <a href="#">
+                    <div class="rect"><i class="icon-cart"></i></div>
+                    <span>Мои заказы</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="rect"><i class="icon-profile"></i></div>
+                    <span>Личные данные</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="rect"><i class="icon-mail-mini"></i></div>
+                    <span>Мои подписки</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="rect"><i class="icon-card"></i></div>
+                    <span>Оформить карту</span>
+                  </a>
+                </li>
+              </ul>
+              <a href="#" class="drop-exit">
+                <div class="rect"><i class="icon-exit"></i></div>
+                <span>Выйти</span>
+              </a>
+            </div>
+          </div>
           <a href="#" class="btn-p _circle">
             <div class="rect">
               <i class="icon-bookmark"></i>
@@ -2295,18 +2331,16 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price _fill">
-                    <div class="item-price-val"><strong>18 717 ₽</strong></div>
-                    <div class="item-text">Онлайн (-5%)</div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-val _neighbour">19 702 ₽</div>
-                    <div class="item-text">В магазине</div>
-                  </div>
+                  <div class="item-current-price">18 717 ₽</div>
                 </div>
-                <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
-                  <span>В корзину</span>
+                <div class="card-product__bottom-buttons">
+                  <div class="card-product__favourite-btn _active">
+                    <i class="icon-bookmark"></i>
+                  </div>
+                  <div class="card-product__cart-btn">
+                    <i class="icon-cart"></i>
+                    <span>В корзину</span>
+                  </div>
                 </div>
               </div>
             </article>
@@ -2332,16 +2366,14 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price">
-                    <div class="item-price-val"><strong>490 ₽</strong></div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-old">602 ₽</div>
-                  </div>
+                  <div class="item-current-price">490 ₽</div>
+                  <div class="item-price-old">602 ₽</div>
                 </div>
-                <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
-                  <span>В корзину</span>
+                <div class="card-product__bottom-buttons">
+                  <div class="card-product__cart-btn">
+                    <i class="icon-cart"></i>
+                    <span>В корзину</span>
+                  </div>
                 </div>
               </div>
             </article>
@@ -2368,18 +2400,16 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price _fill">
-                    <div class="item-price-val"><strong>18 717 ₽</strong></div>
-                    <div class="item-text">Онлайн (-5%)</div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-val _neighbour">19 702 ₽</div>
-                    <div class="item-text">В магазине</div>
-                  </div>
+                  <div class="item-current-price">18 717 ₽</div>
                 </div>
-                <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
-                  <span>В корзину</span>
+                <div class="card-product__bottom-buttons">
+                  <div class="card-product__favourite-btn">
+                    <i class="icon-bookmark"></i>
+                  </div>
+                  <div class="card-product__cart-btn">
+                    <i class="icon-cart"></i>
+                    <span>В корзину</span>
+                  </div>
                 </div>
               </div>
             </article>
@@ -2405,12 +2435,8 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price">
-                    <div class="item-price-val"><strong>490 ₽</strong></div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-old">602 ₽</div>
-                  </div>
+                  <div class="item-current-price">490 ₽</div>
+                  <div class="item-price-old">602 ₽</div>
                 </div>
                 <div class="card-product__cart-btn">
                   <i class="icon-cart"></i>
@@ -2441,18 +2467,16 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price _fill">
-                    <div class="item-price-val"><strong>18 717 ₽</strong></div>
-                    <div class="item-text">Онлайн (-5%)</div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-val _neighbour">19 702 ₽</div>
-                    <div class="item-text">В магазине</div>
-                  </div>
+                  <div class="item-current-price">18 717 ₽</div>
                 </div>
-                <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
-                  <span>В корзину</span>
+                <div class="card-product__bottom-buttons">
+                  <div class="card-product__favourite-btn">
+                    <i class="icon-bookmark"></i>
+                  </div>
+                  <div class="card-product__cart-btn">
+                    <i class="icon-cart"></i>
+                    <span>В корзину</span>
+                  </div>
                 </div>
               </div>
             </article>
@@ -2478,12 +2502,8 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price">
-                    <div class="item-price-val"><strong>490 ₽</strong></div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-old">602 ₽</div>
-                  </div>
+                  <div class="item-current-price">490 ₽</div>
+                  <div class="item-price-old">602 ₽</div>
                 </div>
                 <div class="card-product__cart-btn">
                   <i class="icon-cart"></i>
@@ -2514,18 +2534,16 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price _fill">
-                    <div class="item-price-val"><strong>18 717 ₽</strong></div>
-                    <div class="item-text">Онлайн (-5%)</div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-val _neighbour">19 702 ₽</div>
-                    <div class="item-text">В магазине</div>
-                  </div>
+                  <div class="item-current-price">18 717 ₽</div>
                 </div>
-                <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
-                  <span>В корзину</span>
+                <div class="card-product__bottom-buttons">
+                  <div class="card-product__favourite-btn">
+                    <i class="icon-bookmark"></i>
+                  </div>
+                  <div class="card-product__cart-btn">
+                    <i class="icon-cart"></i>
+                    <span>В корзину</span>
+                  </div>
                 </div>
               </div>
             </article>
@@ -2551,12 +2569,8 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price">
-                    <div class="item-price-val"><strong>490 ₽</strong></div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-old">602 ₽</div>
-                  </div>
+                  <div class="item-current-price">490 ₽</div>
+                  <div class="item-price-old">602 ₽</div>
                 </div>
                 <div class="card-product__cart-btn">
                   <i class="icon-cart"></i>
@@ -2608,18 +2622,16 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price _fill">
-                    <div class="item-price-val"><strong>18 717 ₽</strong></div>
-                    <div class="item-text">Онлайн (-5%)</div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-val _neighbour">19 702 ₽</div>
-                    <div class="item-text">В магазине</div>
-                  </div>
+                  <div class="item-current-price">18 717 ₽</div>
                 </div>
-                <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
-                  <span>В корзину</span>
+                <div class="card-product__bottom-buttons">
+                  <div class="card-product__favourite-btn _active">
+                    <i class="icon-bookmark"></i>
+                  </div>
+                  <div class="card-product__cart-btn">
+                    <i class="icon-cart"></i>
+                    <span>В корзину</span>
+                  </div>
                 </div>
               </div>
             </article>
@@ -2645,16 +2657,14 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price">
-                    <div class="item-price-val"><strong>490 ₽</strong></div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-old">602 ₽</div>
-                  </div>
+                  <div class="item-current-price">490 ₽</div>
+                  <div class="item-price-old">602 ₽</div>
                 </div>
-                <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
-                  <span>В корзину</span>
+                <div class="card-product__bottom-buttons">
+                  <div class="card-product__cart-btn">
+                    <i class="icon-cart"></i>
+                    <span>В корзину</span>
+                  </div>
                 </div>
               </div>
             </article>
@@ -2681,18 +2691,16 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price _fill">
-                    <div class="item-price-val"><strong>18 717 ₽</strong></div>
-                    <div class="item-text">Онлайн (-5%)</div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-val _neighbour">19 702 ₽</div>
-                    <div class="item-text">В магазине</div>
-                  </div>
+                  <div class="item-current-price">18 717 ₽</div>
                 </div>
-                <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
-                  <span>В корзину</span>
+                <div class="card-product__bottom-buttons">
+                  <div class="card-product__favourite-btn">
+                    <i class="icon-bookmark"></i>
+                  </div>
+                  <div class="card-product__cart-btn">
+                    <i class="icon-cart"></i>
+                    <span>В корзину</span>
+                  </div>
                 </div>
               </div>
             </article>
@@ -2718,12 +2726,8 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price">
-                    <div class="item-price-val"><strong>490 ₽</strong></div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-old">602 ₽</div>
-                  </div>
+                  <div class="item-current-price">490 ₽</div>
+                  <div class="item-price-old">602 ₽</div>
                 </div>
                 <div class="card-product__cart-btn">
                   <i class="icon-cart"></i>
@@ -2754,18 +2758,16 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price _fill">
-                    <div class="item-price-val"><strong>18 717 ₽</strong></div>
-                    <div class="item-text">Онлайн (-5%)</div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-val _neighbour">19 702 ₽</div>
-                    <div class="item-text">В магазине</div>
-                  </div>
+                  <div class="item-current-price">18 717 ₽</div>
                 </div>
-                <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
-                  <span>В корзину</span>
+                <div class="card-product__bottom-buttons">
+                  <div class="card-product__favourite-btn">
+                    <i class="icon-bookmark"></i>
+                  </div>
+                  <div class="card-product__cart-btn">
+                    <i class="icon-cart"></i>
+                    <span>В корзину</span>
+                  </div>
                 </div>
               </div>
             </article>
@@ -2791,12 +2793,8 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price">
-                    <div class="item-price-val"><strong>490 ₽</strong></div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-old">602 ₽</div>
-                  </div>
+                  <div class="item-current-price">490 ₽</div>
+                  <div class="item-price-old">602 ₽</div>
                 </div>
                 <div class="card-product__cart-btn">
                   <i class="icon-cart"></i>
@@ -2827,18 +2825,16 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price _fill">
-                    <div class="item-price-val"><strong>18 717 ₽</strong></div>
-                    <div class="item-text">Онлайн (-5%)</div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-val _neighbour">19 702 ₽</div>
-                    <div class="item-text">В магазине</div>
-                  </div>
+                  <div class="item-current-price">18 717 ₽</div>
                 </div>
-                <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
-                  <span>В корзину</span>
+                <div class="card-product__bottom-buttons">
+                  <div class="card-product__favourite-btn">
+                    <i class="icon-bookmark"></i>
+                  </div>
+                  <div class="card-product__cart-btn">
+                    <i class="icon-cart"></i>
+                    <span>В корзину</span>
+                  </div>
                 </div>
               </div>
             </article>
@@ -2864,12 +2860,8 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price">
-                    <div class="item-price-val"><strong>490 ₽</strong></div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-old">602 ₽</div>
-                  </div>
+                  <div class="item-current-price">490 ₽</div>
+                  <div class="item-price-old">602 ₽</div>
                 </div>
                 <div class="card-product__cart-btn">
                   <i class="icon-cart"></i>
@@ -2951,18 +2943,16 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price _fill">
-                    <div class="item-price-val"><strong>18 717 ₽</strong></div>
-                    <div class="item-text">Онлайн (-5%)</div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-val _neighbour">19 702 ₽</div>
-                    <div class="item-text">В магазине</div>
-                  </div>
+                  <div class="item-current-price">18 717 ₽</div>
                 </div>
-                <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
-                  <span>В корзину</span>
+                <div class="card-product__bottom-buttons">
+                  <div class="card-product__favourite-btn _active">
+                    <i class="icon-bookmark"></i>
+                  </div>
+                  <div class="card-product__cart-btn">
+                    <i class="icon-cart"></i>
+                    <span>В корзину</span>
+                  </div>
                 </div>
               </div>
             </article>
@@ -2988,16 +2978,14 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price">
-                    <div class="item-price-val"><strong>490 ₽</strong></div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-old">602 ₽</div>
-                  </div>
+                  <div class="item-current-price">490 ₽</div>
+                  <div class="item-price-old">602 ₽</div>
                 </div>
-                <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
-                  <span>В корзину</span>
+                <div class="card-product__bottom-buttons">
+                  <div class="card-product__cart-btn">
+                    <i class="icon-cart"></i>
+                    <span>В корзину</span>
+                  </div>
                 </div>
               </div>
             </article>
@@ -3024,18 +3012,16 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price _fill">
-                    <div class="item-price-val"><strong>18 717 ₽</strong></div>
-                    <div class="item-text">Онлайн (-5%)</div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-val _neighbour">19 702 ₽</div>
-                    <div class="item-text">В магазине</div>
-                  </div>
+                  <div class="item-current-price">18 717 ₽</div>
                 </div>
-                <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
-                  <span>В корзину</span>
+                <div class="card-product__bottom-buttons">
+                  <div class="card-product__favourite-btn">
+                    <i class="icon-bookmark"></i>
+                  </div>
+                  <div class="card-product__cart-btn">
+                    <i class="icon-cart"></i>
+                    <span>В корзину</span>
+                  </div>
                 </div>
               </div>
             </article>
@@ -3061,12 +3047,8 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price">
-                    <div class="item-price-val"><strong>490 ₽</strong></div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-old">602 ₽</div>
-                  </div>
+                  <div class="item-current-price">490 ₽</div>
+                  <div class="item-price-old">602 ₽</div>
                 </div>
                 <div class="card-product__cart-btn">
                   <i class="icon-cart"></i>
@@ -3097,18 +3079,16 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price _fill">
-                    <div class="item-price-val"><strong>18 717 ₽</strong></div>
-                    <div class="item-text">Онлайн (-5%)</div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-val _neighbour">19 702 ₽</div>
-                    <div class="item-text">В магазине</div>
-                  </div>
+                  <div class="item-current-price">18 717 ₽</div>
                 </div>
-                <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
-                  <span>В корзину</span>
+                <div class="card-product__bottom-buttons">
+                  <div class="card-product__favourite-btn">
+                    <i class="icon-bookmark"></i>
+                  </div>
+                  <div class="card-product__cart-btn">
+                    <i class="icon-cart"></i>
+                    <span>В корзину</span>
+                  </div>
                 </div>
               </div>
             </article>
@@ -3134,12 +3114,8 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price">
-                    <div class="item-price-val"><strong>490 ₽</strong></div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-old">602 ₽</div>
-                  </div>
+                  <div class="item-current-price">490 ₽</div>
+                  <div class="item-price-old">602 ₽</div>
                 </div>
                 <div class="card-product__cart-btn">
                   <i class="icon-cart"></i>
@@ -3170,18 +3146,16 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price _fill">
-                    <div class="item-price-val"><strong>18 717 ₽</strong></div>
-                    <div class="item-text">Онлайн (-5%)</div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-val _neighbour">19 702 ₽</div>
-                    <div class="item-text">В магазине</div>
-                  </div>
+                  <div class="item-current-price">18 717 ₽</div>
                 </div>
-                <div class="card-product__cart-btn">
-                  <i class="icon-cart"></i>
-                  <span>В корзину</span>
+                <div class="card-product__bottom-buttons">
+                  <div class="card-product__favourite-btn">
+                    <i class="icon-bookmark"></i>
+                  </div>
+                  <div class="card-product__cart-btn">
+                    <i class="icon-cart"></i>
+                    <span>В корзину</span>
+                  </div>
                 </div>
               </div>
             </article>
@@ -3207,12 +3181,8 @@
               </div>
               <div class="card-product__bottom">
                 <div class="card-product__price">
-                  <div class="item-price">
-                    <div class="item-price-val"><strong>490 ₽</strong></div>
-                  </div>
-                  <div class="item-price">
-                    <div class="item-price-old">602 ₽</div>
-                  </div>
+                  <div class="item-current-price">490 ₽</div>
+                  <div class="item-price-old">602 ₽</div>
                 </div>
                 <div class="card-product__cart-btn">
                   <i class="icon-cart"></i>
@@ -3330,6 +3300,6 @@
 <script src="./files/fancybox/fancybox.min.js"></script>
 <script src="./files/inputmask/inputmask.min.js"></script>
   
-  <script src="./js/app.js?ver=mtider19"></script>
+  <script src="./js/app.js?ver=mtiqhm2d"></script>
 </body>
 </html>

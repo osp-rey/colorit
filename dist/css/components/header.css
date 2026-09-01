@@ -150,9 +150,20 @@
 }
 
 .header__buttons-menu .btn-p {
+  position: relative;
   padding-top: 8px;
   padding-bottom: 8px;
   min-height: 48px;
+}
+
+.header__buttons-menu .btn-p._account._open {
+  background-color: var(--geyser) !important;
+  border-color: var(--geyser) !important;
+}
+
+.header__buttons-menu .btn-p._account._open .header__acc-drop {
+  opacity: 1;
+  visibility: visible;
 }
 
 .header__buttons-menu .btn-p._circle {
@@ -161,8 +172,8 @@
   padding: 0 !important;
   border-radius: 50%;
   min-height: auto !important;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
 }
 
 .header__buttons-menu .btn-p._circle span {
@@ -205,6 +216,98 @@
   color: white;
   font-size: 11px;
   transition: background-color 0.3s ease;
+}
+
+.header__acc-drop {
+  position: absolute;
+  top: 100%;
+  margin-top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 12px;
+  color: var(--black);
+  z-index: 30;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.header__acc-drop .drop-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 10px 20px;
+  border-bottom: 1px solid var(--geyser);
+  text-align: center;
+}
+
+.header__acc-drop .drop-title {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 120%;
+}
+
+.header__acc-drop .drop-mail {
+  font-size: 15px;
+  line-height: 120%;
+  color: var(--bombay);
+  transition: color 0.3s ease;
+}
+
+.header__acc-drop .drop-list {
+  border-bottom: 1px solid var(--geyser);
+}
+
+.header__acc-drop .drop-list a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.header__acc-drop .drop-list a .rect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.header__acc-drop .drop-list a i {
+  font-size: 16px;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.header__acc-drop .drop-exit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  font-size: 14px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.header__acc-drop .drop-exit .rect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.header__acc-drop .drop-exit i {
+  font-size: 16px;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
 }
 
 .header-nav {
@@ -341,6 +444,11 @@
     padding: 6px 12px;
   }
 
+  .header__buttons-menu .btn-p._circle {
+    width: 40px;
+    height: 40px;
+  }
+
   .header__buttons-menu .btn-p._circle-mob {
     align-items: center;
     justify-content: center;
@@ -403,6 +511,28 @@
     background-color: var(--primary-h);
   }
 
+  .header__acc-drop .drop-mail:hover {
+    color: var(--primary);
+  }
+
+  .header__acc-drop .drop-list a:hover {
+    background-color: rgba(221, 15, 18, 0.07);
+    color: var(--primary);
+  }
+
+  .header__acc-drop .drop-list a:hover i {
+    color: var(--primary);
+  }
+
+  .header__acc-drop .drop-exit:hover {
+    background-color: rgba(221, 15, 18, 0.07);
+    color: var(--primary);
+  }
+
+  .header__acc-drop .drop-exit:hover i {
+    color: var(--primary);
+  }
+
   .header-nav__slide:hover {
     color: var(--primary);
   }
@@ -431,6 +561,28 @@
 
   .header__burger-btn:active {
     background-color: var(--primary-h);
+  }
+
+  .header__acc-drop .drop-mail:active {
+    color: var(--primary);
+  }
+
+  .header__acc-drop .drop-list a:active {
+    background-color: rgba(221, 15, 18, 0.07);
+    color: var(--primary);
+  }
+
+  .header__acc-drop .drop-list a:active i {
+    color: var(--primary);
+  }
+
+  .header__acc-drop .drop-exit:active {
+    background-color: rgba(221, 15, 18, 0.07);
+    color: var(--primary);
+  }
+
+  .header__acc-drop .drop-exit:active i {
+    color: var(--primary);
   }
 
   .header-nav__slide:active {

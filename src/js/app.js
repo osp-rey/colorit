@@ -1,3 +1,4 @@
+import accDrop from "./functions/accDrop.js";
 import anchors from "./functions/anchors.js";
 import burger from "./functions/burger.js";
 import catsListToggle from "./functions/catsListToggle.js";
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   sidebarAccount();
   videoBg();
   reviewsInit();
+  accDrop();
 
   Fancybox.bind("[data-fancybox]", {
     closeButton: false,

@@ -120,9 +120,9 @@ export default function sliders() {
         speed: 900,
         slidesPerView: "auto",
         spaceBetween: 5,
-        autoplay: {
-          delay: 6500,
-        },
+        // autoplay: {
+        //   delay: 6500,
+        // },
         navigation: {
           prevEl: sliderWrap.querySelector(".slider-arrow._prev"),
           nextEl: sliderWrap.querySelector(".slider-arrow._next"),

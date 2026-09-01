@@ -13,7 +13,12 @@
     border-color: var(--iron);
 
     .card-product__cart-btn {
-      opacity: 1;
+      margin-left: 8px;
+      max-width: 48px;
+
+      @include laptop-middle {
+        max-width: 38px;
+      }
     }
   }
   @include tablet-min {
@@ -103,31 +108,30 @@
     }
   }
   &__bottom {
-    display: flex;
-    justify-content: space-between;
+    @include flex-between;
     padding-top: 10px;
     margin-top: auto;
     gap: 12px;
     width: 100%;
     @include tablet-min {
       padding-top: 5px;
-      flex: 1;
-      flex-direction: column;
       flex-wrap: wrap;
       gap: 10px;
     }
   }
   &__price {
     display: flex;
-    gap: 12px;
+    align-items: center;
+    gap: 15px;
     @include laptop-middle {
-      gap: 8px;
+      gap: 10px;
     }
-    @include tablet {
-      align-items: center;
-    }
-    @include tablet-min {
-      gap: 5px;
+    .item-current-price {
+      font-weight: 600;
+      font-size: 20px;
+      @include tablet {
+        font-size: 18px;
+      }
     }
     .item-price {
       font-weight: 300;
@@ -146,7 +150,7 @@
         font-weight: 600;
         font-size: 16px;
       }
-      
+
       &._fill {
         padding: 4px;
         border-radius: 4px;
@@ -189,40 +193,82 @@
       }
     }
   }
+  &__bottom-buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    flex: 1;
+  }
+  &__favourite-btn {
+    @include flex-center;
+    border-radius: 50%;
+    border: 1px solid var(--geyser);
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+    
+    font-size: 18px;
+    
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+
+    @include hover {
+      background-color: var(--geyser);
+    }
+    @include laptop-min {
+      width: 38px;
+      height: 38px;
+      font-size: 16px;
+    }
+    @include tablet-min {
+      order: 2;
+    }
+
+    &._active {
+      background-color: var(--geyser);
+    }
+  }
   &__cart-btn {
     @include flex-center;
     cursor: pointer;
     flex-shrink: 0;
     border-radius: 50%;
-    width: 46px;
     height: 46px;
     background-color: var(--primary);
-    opacity: 0;
+    overflow: hidden;
+    width: 100%;
+    flex-shrink: 0;
+    max-width: 0px;
 
     color: white;
     font-size: 20px;
 
     transition:
       background-color 0.3s ease,
-      opacity 0.3s ease;
+      opacity 0.3s ease,
+      margin-left 0.3s ease,
+      max-width 0.3s ease;
     @include hover {
       background-color: var(--primary-h);
     }
     @include laptop-middle {
-      width: 38px;
       height: 38px;
       font-size: 18px;
     }
     @include laptop-min {
-      opacity: 1 !important;
+      margin-left: 8px !important;
+      max-width: 38px !important;
     }
     @include tablet-min {
-      width: 100%;
+      max-width: none !important;
+      flex: 1;
       border-radius: 50px;
       padding: 10px;
       height: auto;
       text-align: center;
       font-size: 14px;
+      margin: 0px 5px 0px 0px !important;
+      order: 1;
     }
 
     span {
