@@ -172,7 +172,7 @@
     display: flex;
     gap: 15px;
 
-    transition: transform .3s ease;
+    transition: transform 0.3s ease;
     @include laptop-min {
       gap: 10px;
     }
@@ -201,7 +201,7 @@
 
     font-size: 16px;
 
-    transition: border-color .3s ease;
+    transition: border-color 0.3s ease;
     @include hover {
       border-color: var(--primary);
     }
@@ -212,17 +212,49 @@
     @include laptop-min {
       gap: 10px;
       margin-left: auto;
+      flex-shrink: 0;
     }
     .btn-p {
       padding-top: 8px;
       padding-bottom: 8px;
       min-height: 48px;
       @include laptop-min {
-        min-height: auto;
+        min-height: 0;
+        height: auto;
         padding: 6px 12px;
       }
 
+      &._circle {
+        align-items: center;
+        justify-content: center;
+        padding: 0 !important;
+        border-radius: 50%;
+        min-height: auto !important;
+        width: 40px;
+        height: 40px;
+
+        span {
+          display: none;
+        }
+      }
+      &._circle-mob {
+        @include laptop-min {
+          align-items: center;
+          justify-content: center;
+          padding: 0 !important;
+          border-radius: 50%;
+          min-height: auto !important;
+          width: 40px;
+          height: 40px;
+
+          span {
+            display: none;
+          }
+        }
+      }
+
       .rect {
+        @include flex-center;
         width: 17px;
         height: 17px;
       }
